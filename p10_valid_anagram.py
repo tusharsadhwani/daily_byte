@@ -1,6 +1,7 @@
 """Take two inputs and verify both are anagrams of each other"""
 
 from collections import Counter, defaultdict
+from typing import Dict
 
 
 def check_anagram_alternative(word1: str, word2: str) -> bool:
@@ -12,7 +13,7 @@ def check_anagram_alternative(word1: str, word2: str) -> bool:
 
 def check_anagram(word1: str, word2: str) -> bool:
     """Checks if two words are anagrams"""
-    chars = defaultdict(int)
+    chars: Dict[str, int] = defaultdict(int)
     for char in word1:
         chars[char] += 1
     for char in word2:

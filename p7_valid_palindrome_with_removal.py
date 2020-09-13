@@ -2,9 +2,10 @@
 Code that prints if a string is a valid palindrome after removing at most one
 charcater from the string.
 """
+from typing import Tuple as T
 
 
-def iterate(text: str, forward_index: int, reverse_index: int, can_skip: bool) -> (int, int, bool):
+def iterate(text: str, forward_index: int, reverse_index: int, can_skip: bool) -> T[int, int, bool]:
     """Finds the indices of the next set of valid alphabets in the string."""
     if text[forward_index] == text[reverse_index]:
         return forward_index, reverse_index, True

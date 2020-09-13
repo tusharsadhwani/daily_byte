@@ -14,7 +14,7 @@ Ex: Given the following strings...
 
 def check_capitalization(string: str) -> bool:
     """Checks the capitalization of the string and returns if it is valid."""
-    first_char, second_char, *_ = string
+    first_char, second_char, *_ = list(string)
 
     if first_char.islower() and second_char.isupper():
         return False

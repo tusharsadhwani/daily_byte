@@ -8,17 +8,18 @@ Ex: Given the following...
 [3, 9, 13, 7], k = 8, return False
 [4, 2, 6, 5, 2], k = 4, return True (as 2 + 2 == 4)
 """
+from typing import List
 
 
-def check_two_sum(array: str, num: int) -> bool:
+def check_two_sum(array: List[int], num: int) -> bool:
     """Returns if any two numbers in array add to num or not"""
 
     # not using array.sort() as we don't want to modify the original array
-    array = sorted(array)
+    sorted_array = sorted(array)
 
-    low, high = 0, len(array) - 1
+    low, high = 0, len(sorted_array) - 1
     while low < high:
-        total = array[low] + array[high]
+        total = sorted_array[low] + sorted_array[high]
 
         if total == num:
             return True
