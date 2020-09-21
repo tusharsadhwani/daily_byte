@@ -73,7 +73,7 @@ def create_node_list(values: List[int]) -> NodeList:
     return head
 
 
-def remove_nth_to_last_node(head: NodeList, num: int) -> None:
+def remove_nth_to_last_node(head: NodeList, num: int) -> NodeList:
     """Removes Nth to last node from linked list"""
     tail = head
     queue: List[NodeList] = []
@@ -84,6 +84,10 @@ def remove_nth_to_last_node(head: NodeList, num: int) -> None:
         if len(queue) > num + 1:
             queue.pop(0)
 
+    # Edge case:
+    if num == len(queue):
+        return head.next
+
     # Now, queue[0] is N+1th from last,
     # queue[1] ia Nth from last and so on
     # We want N+1th node to point to N-1th node,
@@ -93,16 +97,18 @@ def remove_nth_to_last_node(head: NodeList, num: int) -> None:
     else:
         queue[0].next = queue[2]
 
+    return head
+
 
 def main() -> None:
     """Main Function"""
-    l = create_node_list([1, 2, 3])
+    node_list = create_node_list([1, 2, 3])
 
-    remove_nth_to_last_node(l, 1)
-    # remove_nth_to_last_node(l, 2)
-    # remove_nth_to_last_node(l, 3)
+    node_list = remove_nth_to_last_node(node_list, 1)
+    # node_list = remove_nth_to_last_node(node_list, 2)
+    # node_list = remove_nth_to_last_node(node_list, 3)
 
-    l.print()
+    node_list.print()
 
 
 if __name__ == "__main__":
