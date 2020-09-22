@@ -30,7 +30,7 @@ def remove_nth_to_last_node(head: NodeList, num: int) -> NodeList:
         return head.next
 
     # Now, queue[0] is N+1th from last,
-    # queue[1] ia Nth from last and so on
+    # queue[1] ia Nth from last, and so on.
     # We want N+1th node to point to N-1th node,
     # so that Nth node is removed from the link
     if len(queue) <= 2:
