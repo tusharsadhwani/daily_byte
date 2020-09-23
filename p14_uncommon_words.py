@@ -6,15 +6,17 @@ sentences). You may assume that each sentence is a sequence of words
 
 Ex: given the following strings...
 
-sentence1 = "the quick", sentence2 = "brown fox",
-            return ["the", "quick", "brown", "fox"]
+sentence1 = "the quick",
+sentence2 = "brown fox",
+return ["the", "quick", "brown", "fox"]
 
 sentence1 = "the tortoise beat the haire",
-            sentence2 = "the tortoise lost to the haire",
-            return ["beat", "to", "lost"]
+sentence2 = "the tortoise lost to the haire",
+return ["beat", "to", "lost"]
 
-sentence1 = "copper coffee pot", sentence2 = "hot coffee pot",
-            return ["copper", "hot"]
+sentence1 = "copper coffee pot",
+sentence2 = "hot coffee pot",
+return ["copper", "hot"]
 """
 
 from typing import List
