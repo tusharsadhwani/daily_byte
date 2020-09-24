@@ -16,8 +16,8 @@ from data_types.node_list import NodeList, create_node_list
 
 def remove_nth_to_last_node(head: NodeList, num: int) -> NodeList:
     """Removes Nth to last node from linked list"""
-    tail = head
-    queue: List[NodeList] = []
+    tail = head.next
+    queue: List[NodeList] = [head]
     while tail is not None:
         queue.append(tail)
         tail = tail.next
@@ -27,6 +27,8 @@ def remove_nth_to_last_node(head: NodeList, num: int) -> NodeList:
 
     # Edge case:
     if num == len(queue):
+        if head.next is None:
+            raise ValueError('Empty list after removal of node')
         return head.next
 
     # Now, queue[0] is N+1th from last,
