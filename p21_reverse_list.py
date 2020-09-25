@@ -31,9 +31,9 @@ def reverse_list(node_list: NodeList):
 
 def main():
     """Main Function"""
-    # node_list = create_node_list([1, 2, 3])
+    node_list = create_node_list([1, 2, 3])
     # node_list = create_node_list([7, 15, 9, 2])
-    node_list = create_node_list([1])
+    # node_list = create_node_list([1])
 
     node_list = reverse_list(node_list)
     node_list.print()
