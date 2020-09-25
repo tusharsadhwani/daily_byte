@@ -18,13 +18,10 @@ from data_types.node_list import NodeList, create_node_list
 def reverse_list(node_list: NodeList):
     """Reverse the linked list and return the new head"""
     head = node_list
-    prev_node, curr_node = head, head.next
+    prev_node, node = head, head.next
 
-    while curr_node is not None:
-        temp = curr_node.next
-        curr_node.next = prev_node
-        prev_node = curr_node
-        curr_node = temp
+    while node is not None:
+        node.next, prev_node, node = prev_node, node, node.next
 
     last_node = prev_node
     head.next = None
@@ -34,9 +31,9 @@ def reverse_list(node_list: NodeList):
 
 def main():
     """Main Function"""
-    node_list = create_node_list([1, 2, 3])
+    # node_list = create_node_list([1, 2, 3])
     # node_list = create_node_list([7, 15, 9, 2])
-    # node_list = create_node_list([1])
+    node_list = create_node_list([1])
 
     node_list = reverse_list(node_list)
     node_list.print()
