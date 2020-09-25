@@ -9,7 +9,7 @@ Ex: Given the following linked lists...
 1->2->3 -> false
 1->1 true (1 points to itself)
 """
-from data_types.node_list import NodeList, create_linked_list_unique_items
+from data_types.node_list import NodeList, create_node_list_unique_items
 
 
 def contains_cycle(node_list: NodeList) -> bool:
@@ -38,7 +38,7 @@ def main():
     # nums = [1, 2, 3]
     # nums = [1, 1]
 
-    node_list = create_linked_list_unique_items(nums)
+    node_list = create_node_list_unique_items(nums)
     print(contains_cycle(node_list))
 
 

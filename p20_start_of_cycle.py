@@ -12,7 +12,7 @@ Ex: Given the following linked lists...
 
 from typing import Optional
 
-from data_types.node_list import NodeList, create_linked_list_unique_items
+from data_types.node_list import NodeList, create_node_list_unique_items
 
 
 def start_of_cycle(node_list: NodeList) -> Optional[NodeList]:
@@ -56,7 +56,7 @@ def main():
     # nums = [1, 2, 3, 4, 5, 2]
     # nums = [1, 9, 3, 7, 7]
 
-    node_list = create_linked_list_unique_items(nums)
+    node_list = create_node_list_unique_items(nums)
     start_node = start_of_cycle(node_list)
     if start_node is None:
         print('null')
