@@ -1,6 +1,6 @@
 """Standard singly linked list implementation"""
 from __future__ import annotations
-from typing import List, Optional
+from typing import Dict, List, Optional
 
 
 class NodeList:
@@ -70,5 +70,27 @@ def create_node_list(values: List[int]) -> NodeList:
         node = NodeList(value)
         last_node.next = node
         last_node = node
+
+    return head
+
+
+def create_linked_list_unique_items(items: List[int]):
+    """
+    Creates a linked list out of items, whose values when repeated,
+    refer to the previously existing node in the list.
+    """
+    head = NodeList(items[0])
+    node = head
+    nodes: Dict[int, NodeList] = {items[0]: head}
+
+    for item in items[1:]:
+        if item in nodes:
+            node.next = nodes[item]
+        else:
+            new_node = NodeList(item)
+            nodes[item] = new_node
+            node.next = new_node
+
+        node = node.next
 
     return head

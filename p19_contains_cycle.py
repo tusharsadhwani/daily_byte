@@ -9,9 +9,7 @@ Ex: Given the following linked lists...
 1->2->3 -> false
 1->1 true (1 points to itself)
 """
-from typing import Dict, Sequence
-
-from data_types.node_list import NodeList
+from data_types.node_list import NodeList, create_linked_list_unique_items
 
 
 def contains_cycle(node_list: NodeList) -> bool:
@@ -32,28 +30,6 @@ def contains_cycle(node_list: NodeList) -> bool:
             hare = hare.next
 
     return False
-
-
-def create_linked_list_unique_items(items: Sequence[int]):
-    """
-    Creates a linked list out of items, whose values when repeated,
-    refer to the previously existing node in the list.
-    """
-    head = NodeList(items[0])
-    node = head
-    nodes: Dict[int, NodeList] = {items[0]: head}
-
-    for item in items[1:]:
-        if item in nodes:
-            node.next = nodes[item]
-        else:
-            new_node = NodeList(item)
-            nodes[item] = new_node
-            node.next = new_node
-
-        node = node.next
-
-    return head
 
 
 def main():
