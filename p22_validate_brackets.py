@@ -30,6 +30,7 @@ def validate_brackets(brackets: str) -> bool:
             raise ValueError('Invalid input')
 
         if bracket in pairs:
+            # All opening brackets to be pushed to stack
             stack.append(bracket)
         else:
             # Closing bracket found, checking if pop possible
