@@ -86,10 +86,12 @@ def create_linked_list_unique_items(items: List[int]):
     for item in items[1:]:
         if item in nodes:
             node.next = nodes[item]
-        else:
-            new_node = NodeList(item)
-            nodes[item] = new_node
-            node.next = new_node
+            assert item is items[-1], 'Node pointing to previous value must be last node of list'
+            return head
+
+        new_node = NodeList(item)
+        nodes[item] = new_node
+        node.next = new_node
 
         node = node.next
 
