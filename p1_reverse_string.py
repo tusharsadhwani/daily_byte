@@ -1,7 +1,7 @@
 """Program that prints the reverse of a string"""
 
 
-def main():
+def main() -> None:
     """Main Function"""
     print(input("> ")[::-1])
 

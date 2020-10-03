@@ -49,7 +49,7 @@ def validate_brackets(brackets: str) -> bool:
     return len(stack) == 0
 
 
-def main():
+def main() -> None:
     """Main function"""
     brackets = input('> ')
     print(validate_brackets(brackets))

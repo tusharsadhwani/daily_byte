@@ -40,7 +40,7 @@ def find_uncommon_words(sentence1: str, sentence2: str) -> List[str]:
     return list(words)
 
 
-def main():
+def main() -> None:
     """Main function"""
     sentence1 = input('> ')
     sentence2 = input('> ')

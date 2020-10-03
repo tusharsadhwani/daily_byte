@@ -24,7 +24,7 @@ def array_intersection(nums1: List[int], nums2: List[int]) -> List[int]:
     return list(intersection)
 
 
-def main():
+def main() -> None:
     """Main Function"""
     print(array_intersection([2, 4, 4, 2], [2, 4]))
     print(array_intersection([1, 2, 3, 3], [3, 3]))

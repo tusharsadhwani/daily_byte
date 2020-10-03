@@ -22,7 +22,7 @@ def count_matching_characters(jewels: str, stones: str) -> int:
     return common_count
 
 
-def main():
+def main() -> None:
     """Main function"""
     jewels = input("Enter jewels: ")
     stones = input("Enter stones: ")

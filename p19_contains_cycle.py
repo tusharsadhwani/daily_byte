@@ -32,7 +32,7 @@ def contains_cycle(node_list: NodeList) -> bool:
     return False
 
 
-def main():
+def main() -> None:
     """Main function"""
     nums = [1, 2, 3, 1]
     # nums = [1, 2, 3]

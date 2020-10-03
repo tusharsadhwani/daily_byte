@@ -24,7 +24,7 @@ def remove_adjacent_duplicates(string: str) -> str:
     return new_string
 
 
-def main():
+def main() -> None:
     """Main function"""
     string = input('> ')
     print(remove_adjacent_duplicates(string))

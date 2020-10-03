@@ -24,7 +24,7 @@ def spot_the_difference(string_s: str, string_t: str) -> str:
     return ' '
 
 
-def main():
+def main() -> None:
     """Main function"""
     string_s = input("Enter s: ")
     string_t = input("Enter t: ")

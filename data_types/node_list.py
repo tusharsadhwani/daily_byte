@@ -74,7 +74,7 @@ def create_node_list(values: List[int]) -> NodeList:
     return head
 
 
-def create_node_list_unique_items(items: List[int]):
+def create_node_list_unique_items(items: List[int]) -> NodeList:
     """
     Creates a linked list out of items, whose values when repeated,
     refer to the previously existing node in the list.

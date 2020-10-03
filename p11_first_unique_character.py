@@ -10,11 +10,13 @@ Ex: Given the following strings...
 "abcabc", return -1
 """
 
+from typing import Dict
 
-def main():
+
+def main() -> None:
     """Main Function"""
     string = input('> ')
-    unique_characters = dict()
+    unique_characters: Dict[str, int] = dict()
     for index, char in enumerate(string):
         if char in unique_characters:
             unique_characters.pop(char)

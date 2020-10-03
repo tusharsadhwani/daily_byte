@@ -26,7 +26,7 @@ def iterate(text: str, forward_index: int, reverse_index: int, can_skip: bool) -
     return forward_index, reverse_index, False
 
 
-def main():
+def main() -> None:
     """Main function"""
     text = input('Enter a palindrome: ').lower()
     front, back = 0, len(text) - 1

@@ -29,7 +29,7 @@ def check_capitalization(string: str) -> bool:
     return True
 
 
-def main():
+def main() -> None:
     """Main function"""
     string = input('> ')
     result = check_capitalization(string)

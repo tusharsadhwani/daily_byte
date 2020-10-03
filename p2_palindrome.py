@@ -12,7 +12,7 @@ def iterate(text: str, forward_index: int, reverse_index: int) -> Tuple[int, int
     return forward_index, reverse_index
 
 
-def main():
+def main() -> None:
     """Main function"""
     text = input('Enter a palindrome: ').lower()
     is_palindrome = True

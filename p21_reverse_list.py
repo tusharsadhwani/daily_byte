@@ -15,7 +15,7 @@ Ex: Given the following linked lists...
 from data_types.node_list import NodeList, create_node_list
 
 
-def reverse_list(node_list: NodeList):
+def reverse_list(node_list: NodeList) -> NodeList:
     """Reverse the linked list and return the new head"""
     head = node_list
     prev_node, node = head, head.next
@@ -29,7 +29,7 @@ def reverse_list(node_list: NodeList):
     return last_node
 
 
-def main():
+def main() -> None:
     """Main Function"""
     node_list = create_node_list([1, 2, 3])
     # node_list = create_node_list([7, 15, 9, 2])

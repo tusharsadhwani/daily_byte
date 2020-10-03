@@ -18,7 +18,7 @@ def full_adder(bit_a: str, bit_b: str, bit_c: str) -> Tuple[str, str]:
     return carry, _sum
 
 
-def main():
+def main() -> None:
     """Main function"""
     num1 = input('> ')[::-1]
     num2 = input('> ')[::-1]

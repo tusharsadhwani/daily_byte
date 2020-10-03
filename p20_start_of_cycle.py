@@ -50,7 +50,7 @@ def start_of_cycle(node_list: NodeList) -> Optional[NodeList]:
     return None
 
 
-def main():
+def main() -> None:
     """Main function"""
     nums = [1, 2, 3]
     # nums = [1, 2, 3, 4, 5, 2]

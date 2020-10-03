@@ -12,7 +12,7 @@ Ex: Given the following strings...
 """
 
 
-def main():
+def main() -> None:
     """Main Function"""
     moves = input('> ')
 

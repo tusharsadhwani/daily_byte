@@ -36,7 +36,7 @@ def find_moddle_element(node_list: NodeList) -> NodeList:
     return node
 
 
-def main():
+def main() -> None:
     """Main function"""
     node_list = create_node_list([1, 2, 3])
     # node_list = create_node_list([1, 2, 3, 4])

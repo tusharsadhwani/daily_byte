@@ -38,7 +38,7 @@ def check_two_sum(array: List[int], num: int) -> bool:
     return False
 
 
-def main():
+def main() -> None:
     """Main function"""
     print(check_two_sum([1, 3, 8, 2], 10))
     print(check_two_sum([3, 9, 13, 7], 8))

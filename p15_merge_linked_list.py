@@ -12,7 +12,7 @@ list1 = 4->4->7, list2 = 1->5->6->null, return 1->4->4->5->6->7->null
 from data_types.node_list import create_node_list
 
 
-def main():
+def main() -> None:
     """Main Function"""
     list1 = create_node_list([1, 2, 3])
     # list1 = create_node_list([1, 3, 5])

@@ -25,7 +25,7 @@ def longest_common_prefix(words: List[str]) -> str:
     return first_word[:prefix_length]
 
 
-def main():
+def main() -> None:
     """Main function"""
     print(longest_common_prefix(["colorado", "color", "cold"]))
     print(longest_common_prefix(["a", "b", "c"]))

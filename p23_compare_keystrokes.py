@@ -28,7 +28,7 @@ def apply_backspaces(string: str) -> str:
     return new_string
 
 
-def main():
+def main() -> None:
     """Main function"""
     string1 = apply_backspaces(input('> '))
     string2 = apply_backspaces(input('> '))

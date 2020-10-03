@@ -22,7 +22,7 @@ def check_anagram(word1: str, word2: str) -> bool:
     return all(count == 0 for count in chars.values())
 
 
-def main():
+def main() -> None:
     """Main function"""
     word1 = input("Enter word1: ")
     word2 = input("Enter word2: ")
