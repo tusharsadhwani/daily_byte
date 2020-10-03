@@ -56,7 +56,8 @@ def nearest_greater_to_the_right(nums1: List[int], nums2: List[int]) -> List[int
 
     answer: List[int] = []
     for num in nums1:
-        reverse_index = -1 - nums2_indices[num]
+        index = nums2_indices[num]
+        reverse_index = -1 - index
         answer.append(ngr_reverse_list[reverse_index])
 
     return answer
