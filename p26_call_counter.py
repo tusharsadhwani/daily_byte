@@ -45,7 +45,7 @@ class CallCounter:
         return -1
 
 
-def main():
+def main() -> None:
     """Main function"""
     call_counter = CallCounter()
     print(call_counter.ping(1))
