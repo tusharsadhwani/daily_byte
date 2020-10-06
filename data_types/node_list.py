@@ -10,6 +10,23 @@ class NodeList:
         self.value = value
         self.next = _next
 
+        self.iternode: Optional[NodeList] = self
+
+    def __iter__(self) -> NodeList:
+        self.iternode = self
+        return self
+
+    def __next__(self) -> int:
+        if self.iternode is None:
+            raise StopIteration
+
+        node = self.iternode
+        self.iternode = self.iternode.next
+        return node.value
+
+    def __repr__(self) -> str:
+        return f'NodeList(value={self.value})'
+
     def __add__(self, other: NodeList) -> NodeList:
         """Merge two linked lists"""
         node1: Optional[NodeList] = self
