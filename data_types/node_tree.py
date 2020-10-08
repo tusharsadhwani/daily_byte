@@ -1,5 +1,6 @@
 """Standard binary tree implementation"""
-from typing import Any, Optional  # Protocol, Tuple, Union
+from __future__ import annotations
+from typing import Any, Generator, Optional  # Protocol, Tuple, Union
 
 
 class NodeTree:
@@ -13,16 +14,20 @@ class NodeTree:
     def __repr__(self) -> str:
         return f'NodeTree(value={self.value})'
 
-    def print_inorder(self) -> None:
-        """Prints the binary tree in-order"""
+    def traverse_inorder(self) -> Generator[NodeTree, None, None]:
+        """Traverses the binary tree in-order"""
         if self.value is not None:
             if self.left is not None:
-                self.left.print_inorder()
+                yield from self.left.traverse_inorder()
 
-                print(self.value)
+            yield self
 
             if self.right is not None:
-                self.right.print_inorder()
+                yield from self.right.traverse_inorder()
+
+    def print_inorder(self) -> None:
+        """Prints the binary tree in-order"""
+        print(*[node.value for node in self.traverse_inorder()], sep=', ')
 
 
 # It is pretty sad that mypy doesn't support direct recursive types yet
