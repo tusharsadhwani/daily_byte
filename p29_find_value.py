@@ -11,7 +11,7 @@ Ex: Given the tree...
      / \
     1   4
 
-and the search value 1 return a reference to the node containing 1.
+and the search value 1, return a reference to the node containing 1.
 Ex: Given the tree
 
       7
@@ -20,14 +20,14 @@ Ex: Given the tree
        / \
       8   10
 
-and the search value 9 return a reference to the node containing 9.
+and the search value 9, return a reference to the node containing 9.
 Ex: Given the tree
 
       8
      / \
     6   9
 
-and the search value 7 return null.
+and the search value 7, return null.
 """
 
 from __future__ import annotations
@@ -103,10 +103,38 @@ def build_tree(value: Any) -> NodeTree:
     return tree
 
 
+def find_tree_node(tree: NodeTree, value: int) -> Optional[NodeTree]:
+    """Returns the first node with given value, otherwise None"""
+    node: Optional[NodeTree] = None
+
+    if tree.value == value:
+        return tree
+
+    if tree.value is not None:
+        if tree.left is not None:
+            node = find_tree_node(tree.left, value)
+
+        if node:
+            return node
+
+        if tree.right is not None:
+            node = find_tree_node(tree.right, value)
+
+    return node
+
+
 def main() -> None:
     """Main function"""
-    tree = build_tree([1, 2, [3, 4, 5]])
-    tree.print_inorder()
+    tree = build_tree([3, 1, 4])
+    node = find_tree_node(tree, 1)
+
+    # tree = build_tree([7, 5, [9, 8, 10]])
+    # node = find_tree_node(tree, 9)
+
+    # tree = build_tree([8, 6, 9])
+    # node = find_tree_node(tree, 7)
+
+    print(node)
 
 
 if __name__ == "__main__":
