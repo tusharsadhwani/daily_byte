@@ -17,9 +17,9 @@ return...
 
 Ex: Given the following tree...
 
-         5
-        / \
-      2    9
+        5
+       / \
+      2   9
      / \
     1   3
 
