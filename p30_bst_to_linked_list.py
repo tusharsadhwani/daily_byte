@@ -60,7 +60,6 @@ def main() -> None:
     node_list = create_node_list([
         node.value
         for node in tree.traverse_inorder()
-        if node.value is not None
     ])
 
     node_list.print()

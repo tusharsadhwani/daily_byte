@@ -6,7 +6,7 @@ from typing import Any, Generator, Optional  # Protocol, Tuple, Union
 class NodeTree:
     """Standard binary tree implementation"""
 
-    def __init__(self, value: Optional[int] = None) -> None:
+    def __init__(self, value: int) -> None:
         self.value = value
         self.left: Optional[NodeTree] = None
         self.right: Optional[NodeTree] = None
@@ -63,11 +63,9 @@ def build_tree(value: Any) -> NodeTree:
     """Builds binary tree, input is in pre-order form"""
     tree: Optional[NodeTree] = None
 
-    if value is None:
-        tree = NodeTree()
-    elif isinstance(value, int):
+    if isinstance(value, int):
         tree = NodeTree(value)
-    else:
+    elif value is not None:
         tree = build_tree(value[0])
         tree.left = build_tree(value[1])
         tree.right = build_tree(value[2])
