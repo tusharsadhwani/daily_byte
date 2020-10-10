@@ -57,10 +57,7 @@ def main() -> None:
     # tree = build_tree([5, [2, 1, 3], 9])
     # tree = build_tree([5, None, 6])
 
-    node_list = create_node_list([
-        node.value
-        for node in tree.traverse_inorder()
-    ])
+    node_list = create_node_list([node.value for node in tree])
 
     node_list.print()
 

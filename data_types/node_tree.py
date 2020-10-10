@@ -22,8 +22,7 @@ class NodeTree:
         if not isinstance(other, NodeTree):
             return NotImplemented
 
-        for self_node, other_node in zip_longest(
-                self.traverse_inorder(), other.traverse_inorder()):
+        for self_node, other_node in zip_longest(self, other):
             if self_node.value != other_node.value:
                 return False
 
@@ -33,6 +32,9 @@ class NodeTree:
                 return False
 
         return True
+
+    def __iter__(self) -> Generator[NodeTree, None, None]:
+        return self.traverse_inorder()
 
     def traverse_inorder(self) -> Generator[NodeTree, None, None]:
         """Traverses the binary tree in-order"""
@@ -54,11 +56,11 @@ class NodeTree:
                 yield from self.left.traverse_preorder()
 
             if self.right is not None:
-                yield from self.right.traverse_inorder()
+                yield from self.right.traverse_preorder()
 
     def print_inorder(self) -> None:
         """Prints the binary tree in-order"""
-        print(*[node.value for node in self.traverse_inorder()], sep=', ')
+        print(*[node.value for node in self], sep=', ')
 
 
 # It is pretty sad that mypy doesn't support direct recursive types yet
