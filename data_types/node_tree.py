@@ -1,7 +1,7 @@
 """Standard binary tree implementation"""
 from __future__ import annotations
 from itertools import zip_longest
-from typing import Any, Generator, Optional  # Protocol, Tuple, Union
+from typing import Any, Generator, List, Optional  # Protocol, Tuple, Union
 
 
 class NodeTree:
@@ -114,3 +114,25 @@ def build_tree(value: Any) -> NodeTree:
     tree = _build_tree(value)
     assert tree is not None
     return tree
+
+
+def level_order_traversal(
+        node: NodeTree,
+        levels: Optional[List[List[int]]] = None,
+        level: int = 0) -> List[List[int]]:
+    """Traverses the binary tree in-order"""
+    if not levels:
+        levels = []
+
+    if level == len(levels):  # check if new level needs to be added
+        levels.append([node.value])
+    else:
+        levels[level].append(node.value)
+
+    if node.left is not None:
+        level_order_traversal(node.left, levels, level+1)
+
+    if node.right is not None:
+        level_order_traversal(node.right, levels, level+1)
+
+    return levels
