@@ -34,10 +34,11 @@ from typing import List
 
 from data_types.node_tree import NodeTree, build_tree
 
-levels: List[List[int]] = []
 
-
-def level_order_traversal(node: NodeTree, level: int = 0) -> None:
+def level_order_traversal(
+        node: NodeTree,
+        levels: List[List[int]],
+        level: int = 0) -> List[List[int]]:
     """Traverses the binary tree in-order"""
     if level == len(levels):  # check if new level needs to be added
         levels.append([node.value])
@@ -45,10 +46,12 @@ def level_order_traversal(node: NodeTree, level: int = 0) -> None:
         levels[level].append(node.value)
 
     if node.left is not None:
-        level_order_traversal(node.left, level+1)
+        level_order_traversal(node.left, levels, level+1)
 
     if node.right is not None:
-        level_order_traversal(node.right, level+1)
+        level_order_traversal(node.right, levels, level+1)
+
+    return levels
 
 
 def main() -> None:
@@ -57,7 +60,8 @@ def main() -> None:
     # tree = build_tree([2, 10, [15, None, 20]])
     # tree = build_tree([1, [9, 3, None], [32, None, 78]])
 
-    level_order_traversal(tree)
+    levels: List[List[int]] = []
+    levels = level_order_traversal(tree, levels)
     print(levels)
 
 
