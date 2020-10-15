@@ -121,7 +121,7 @@ def level_order_traversal(
         levels: Optional[List[List[int]]] = None,
         level: int = 0) -> List[List[int]]:
     """Traverses the binary tree level by level"""
-    if not levels:
+    if levels is None:
         levels = []
 
     if level == len(levels):  # check if new level needs to be added
@@ -142,7 +142,7 @@ def level_order_traversal_iter(
         node: NodeTree,
         queue: Optional[List[int]] = None) -> List[int]:
     """Traverses the binary tree level by level, without keeping level count"""
-    if not queue:
+    if queue is None:
         queue = [node.value]
 
     if node.left is not None:
