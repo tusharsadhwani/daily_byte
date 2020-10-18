@@ -154,3 +154,28 @@ def level_order_traversal_iter(
         level_order_traversal_iter(node.right, queue)
 
     return queue
+
+
+def get_leaf_paths(
+        node: NodeTree,
+        paths: Optional[List[List[int]]] = None,
+        path: Optional[List[int]] = None) -> List[List[int]]:
+    """Traverses the binary tree level by level"""
+    if paths is None:
+        paths = []
+
+    if not path:
+        path = []
+
+    path = [*path, node.value]
+
+    if node.left is None and node.right is None:
+        paths.append(path)
+
+    if node.left is not None:
+        get_leaf_paths(node.left, paths, path)
+
+    if node.right is not None:
+        get_leaf_paths(node.right, paths, path)
+
+    return paths
