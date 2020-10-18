@@ -48,7 +48,7 @@ def validate_bst(tree: NodeTree) -> bool:
     return True
 
 
-def main():
+def main() -> None:
     """Main function"""
     tree = build_tree([1, 2, 3])
     # tree = build_tree([2, 1, 3])
