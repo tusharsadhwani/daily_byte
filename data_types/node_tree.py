@@ -62,6 +62,12 @@ class NodeTree:
         """Prints the binary tree in-order"""
         print(*[node.value for node in self], sep=', ')
 
+    def leaves(self) -> Generator[NodeTree, None, None]:
+        """Returns all leaves in the tree, in order"""
+        for node in self:
+            if node.left is None and node.right is None:
+                yield node
+
 
 # It is pretty sad that mypy doesn't support direct recursive types yet
 #
