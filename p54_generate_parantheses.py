@@ -18,18 +18,18 @@ from typing import List
 
 
 def build_bracket_sequence(
-        count: int,
-        close: int,
+        n_open: int,
+        n_close: int,
         perms: List[str],
         seq: str = '') -> List[str]:
     """Recursive function to find all possible bracket pairs"""
-    if count == 0 and close == 0:
+    if n_open == 0 and n_close == 0:
         perms.append(seq)
 
-    if count > 0:
-        build_bracket_sequence(count - 1, close, perms, seq + '(')
-    if close > count:
-        build_bracket_sequence(count, close - 1, perms, seq + ')')
+    if n_open > 0:
+        build_bracket_sequence(n_open - 1, n_close, perms, seq + '(')
+    if n_close > n_open:
+        build_bracket_sequence(n_open, n_close - 1, perms, seq + ')')
 
     return perms
 
