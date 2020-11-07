@@ -35,7 +35,7 @@ class CallCounter:
         """
         self.past_timestamps.append(latest_timestamp)
 
-        # Note: can replace with binary search
+        # NOTE: can replace with binary search
         for index, timestamp in enumerate(self.past_timestamps):
             if latest_timestamp - timestamp < 3000:
                 call_count = len(self.past_timestamps) - index
