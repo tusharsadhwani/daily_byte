@@ -23,3 +23,26 @@ items = "FDFFDFDD", return 2
 "FD" creates the first balanced meal.
 "FFDFDD" creates the second balanced meal.
 """
+
+
+def main() -> None:
+    """Main function"""
+    meals = 0
+
+    items = input('> ')
+    foods, drinks = 0, 0
+    for item in items:
+        if item == 'F':
+            foods += 1
+        elif item == 'D':
+            drinks += 1
+
+        if foods == drinks:
+            meals += 1
+            foods, drinks = 0, 0
+
+    print(meals)
+
+
+if __name__ == "__main__":
+    main()
