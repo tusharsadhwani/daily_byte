@@ -67,7 +67,7 @@ def minimum_containers(weights: List[int], limit: int) -> int:
     return containers
 
 
-def main():
+def main() -> None:
     """Main function"""
     weights = [1, 3, 5, 2]
     limit = 5
