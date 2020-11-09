@@ -31,3 +31,34 @@ Explanation:
 1 and 1 are smashed together and both stones are destroyed.
 0 is returned as no stones remain.
 """
+from typing import List
+
+
+def smash_stones(stones: List[int]) -> int:
+    """Smashes stones together until one value remains"""
+    stones.sort()
+
+    while len(stones) >= 2:
+        stone1 = stones.pop()
+        stone2 = stones.pop()
+
+        difference = abs(stone1 - stone2)
+        if difference > 0:
+            stones.append(difference)
+
+    if not stones:
+        return 0
+
+    return stones[0]
+
+
+def main() -> None:
+    """Main function"""
+    stones = [2, 4, 3, 8]
+    # stones = [1, 2, 3, 4]
+
+    print(smash_stones(stones))
+
+
+if __name__ == "__main__":
+    main()
