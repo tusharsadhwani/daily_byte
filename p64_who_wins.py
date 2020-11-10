@@ -19,3 +19,25 @@ Player two takes 2
 Player one takes 1
 3 + 1 > 2 and therefore player one wins
 """
+
+
+def main() -> None:
+    """Main function"""
+    nums = [1, 2, 3]
+
+    player_a, player_b = 0, 0
+    turn = 'A'
+    while nums:
+        bigger_index = len(nums) - 1 if nums[-1] > nums[0] else 0
+        if turn == 'A':
+            player_a += nums.pop(bigger_index)
+            turn = 'B'
+        else:
+            player_b += nums.pop(bigger_index)
+            turn = 'A'
+
+    print(player_a > player_b)
+
+
+if __name__ == "__main__":
+    main()
