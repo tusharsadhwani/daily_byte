@@ -9,7 +9,7 @@ must pay for all their employees’ flights.
 
 Ex: Give the following prices…
 
-prices = [[40,30],[300,200],[50,50],[30,60]], return 310
+prices = [[40, 30],[300, 200],[50, 50],[30, 60]], return 310
 Fly the first personn to office B.
 Fly the second person to office B.
 Fly the third person to office A.
