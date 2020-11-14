@@ -11,13 +11,13 @@ reach the other side.
 
 Note: The frog may only jump in the forward direction.
 
-Ex: Given the following stones…
+Ex: Given the following stones...
 
 stones = [0, 1, 10], return false.
 The frog can jump from stone 0 to stone 1, but then the gap is too far
 to jump to the last stone (i.e. the stone at position 10)
 
-Ex: Given the following stones…
+Ex: Given the following stones...
 
 stones = [0, 1, 2, 4], return true.
 The frog can jump from stone 0, to stone 1, to stone 2, to stone 4.

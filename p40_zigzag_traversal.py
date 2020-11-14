@@ -3,7 +3,7 @@ Given a binary tree, return its zig-zag level order traversal
 (i.e. its level order traversal from left to right the first level,
 right to left the level the second, etc.).
 
-Ex: Given the following tree…
+Ex: Given the following tree...
 
       1
      / \
@@ -11,7 +11,7 @@ Ex: Given the following tree…
 
 return [[1], [3, 2]]
 
-Ex: Given the following tree…
+Ex: Given the following tree...
 
       8
      / \

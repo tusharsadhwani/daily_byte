@@ -8,7 +8,7 @@ value, all values to the right of a given node are greater than the
 current node’s value, and both the left and right subtrees of a given
 node must also be binary search trees.
 
-Ex: Given the following binary tree…
+Ex: Given the following binary tree...
 
       1
      / \
@@ -16,7 +16,7 @@ Ex: Given the following binary tree…
 
 return false.
 
-Ex: Given the following tree…
+Ex: Given the following tree...
 
       2
      / \

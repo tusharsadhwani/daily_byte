@@ -5,7 +5,7 @@ its center (i.e. a line drawn straight down starting from the root).
 Note: a reflection is when an image, flipped across a specified line,
 forms the same image.
 
-Ex: Given the following tree…
+Ex: Given the following tree...
 
       2
      / \
@@ -14,7 +14,7 @@ Ex: Given the following tree…
 return true as when the tree is reflected across its center all the
 nodes match.
 
-Ex: Given the following tree…
+Ex: Given the following tree...
 
       1
      / \

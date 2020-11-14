@@ -3,7 +3,7 @@ Given two binary trees, return whether or not both trees have the same
 leaf sequence. Two trees have the same leaf sequence if both trees’
 leaves read the same from left to right.
 
-Ex: Given the following trees…
+Ex: Given the following trees...
 
       1
      / \
@@ -19,7 +19,7 @@ and
 return false as both the trees' leaves don't read the same from left to
 right (i.e. [1, 3] and [1, 2]).
 
-Ex: Given the following trees…
+Ex: Given the following trees...
 
       8
      / \

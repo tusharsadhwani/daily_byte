@@ -8,7 +8,7 @@ new call being made and returns the number of calls made within the last
 Note: you may assume that the time associated with each subsequent call
 to ping is strictly increasing.
 
-Ex: Given the following calls to ping…
+Ex: Given the following calls to ping...
 
 ping(1), return 1 (1 call within the last 3 seconds)
 ping(300), return 2 (2 calls within the last 3 seconds)

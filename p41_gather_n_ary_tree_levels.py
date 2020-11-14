@@ -4,7 +4,7 @@ Given an n-ary tree, return its level order traversal.
 Note: an n-ary tree is a tree in which each node has no more than N
 children.
 
-Ex: Give the following n-ary tree…
+Ex: Give the following n-ary tree...
 
        8
      / | \
@@ -12,7 +12,7 @@ Ex: Give the following n-ary tree…
 
 return [[8], [2, 3, 29]]
 
-Ex: Given the following n-ary tree…
+Ex: Given the following n-ary tree...
 
          2
        / | \

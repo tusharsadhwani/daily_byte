@@ -1,7 +1,7 @@
 r"""
 Given a binary tree, return the sum of all left leaves of the tree.
 
-Ex: Given the following tree…
+Ex: Given the following tree...
 
       5
      / \
@@ -11,7 +11,7 @@ Ex: Given the following tree…
 
 return 5 (i.e. 2 + 3)
 
-Ex: Given the following tree…
+Ex: Given the following tree...
 
         2
        / \

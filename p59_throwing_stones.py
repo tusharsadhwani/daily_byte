@@ -13,7 +13,7 @@ When smashing these two stones together, one of two things can happen:
 Continue smashing stones together until there is at most one stone left
 and return weight of the remaining stone. If no stones remain return 0.
 
-Ex: Given the following stones…
+Ex: Given the following stones...
 
 stones = [2, 4, 3, 8], return 1
 Explanation:
@@ -22,7 +22,7 @@ Explanation:
 2 and 1 are smashed together, 1 is destroyed, 2 becomes 1.
 1 is the last stone remaining and is therefore returned.
 
-Ex: Given the following stones…
+Ex: Given the following stones...
 
 stones = [1, 2, 3, 4], return 0
 Explanation:

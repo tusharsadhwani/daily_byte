@@ -7,7 +7,7 @@ Given that half the employees must be sent to office A and half the
 employees must be sent to office B, return the minimum cost the company
 must pay for all their employees’ flights.
 
-Ex: Give the following prices…
+Ex: Give the following prices...
 
 prices = [[40, 30],[300, 200],[50, 50],[30, 60]], return 310
 Fly the first personn to office B.

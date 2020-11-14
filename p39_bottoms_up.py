@@ -2,7 +2,7 @@ r"""
 Given a binary tree, returns of all its levels in a bottom-up fashion
 (i.e. last level towards the root).
 
-Ex: Given the following tree…
+Ex: Given the following tree...
 
       2
      / \
@@ -10,7 +10,7 @@ Ex: Given the following tree…
 
 return [[1, 2], [2]]
 
-Ex: Given the following tree…
+Ex: Given the following tree...
 
         7
        / \

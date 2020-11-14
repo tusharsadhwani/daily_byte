@@ -1,6 +1,6 @@
 """
 Given a string of digits, return all possible text messages those digits
-could send. Note: The mapping of digits to letters is as follows…
+could send. Note: The mapping of digits to letters is as follows...
 
 0 -> null
 1 -> null

@@ -1,7 +1,7 @@
 r"""
 Given a binary tree, return the largest value in each of its levels.
 
-Ex: Given the following tree…
+Ex: Given the following tree...
 
       2
      / \
@@ -11,7 +11,7 @@ Ex: Given the following tree…
 
 return [2, 15, 20]
 
-Ex: Given the following tree…
+Ex: Given the following tree...
 
         1
        / \

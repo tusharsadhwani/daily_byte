@@ -11,7 +11,7 @@ the safety of all your passengers.
 Note: You may assume that a the maximum weight of any individual is at
 most limit.
 
-Ex: Given the following passenger weights and limit…
+Ex: Given the following passenger weights and limit...
 
 weights = [1, 3, 5, 2] and limit = 5, return 3
 weights = [1, 2] and limit = 3, return 1

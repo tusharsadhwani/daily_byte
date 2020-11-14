@@ -4,7 +4,7 @@ find all unique combinations of the numbers that sum to the target.
 
 Note: You may use the same number more than once.
 
-Ex: Given the following numbers and target…
+Ex: Given the following numbers and target...
 
 numbers = [2, 4, 6, 3], target = 6,
 

@@ -14,7 +14,7 @@ Return the maximum number of points you can gain.
 
 Note: Each coin may only be used once.
 
-Ex: Given the following coins and starting energy…
+Ex: Given the following coins and starting energy...
 
 coins = [100, 150, 200] and E = 150, return 1
 coins = [100, 200, 300, 400] and E = 200, return 2

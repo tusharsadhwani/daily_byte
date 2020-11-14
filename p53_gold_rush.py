@@ -9,7 +9,7 @@ collect given the following rules:
 
 From current cell, you may walk one cell to the left, right, up, or down
 
-Ex: Given the following gold mine…
+Ex: Given the following gold mine...
 
 goldMine = [
     [0, 2, 0],

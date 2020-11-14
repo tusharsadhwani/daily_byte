@@ -3,7 +3,7 @@ Given a binary tree, return its column order traversal from top to
 bottom and left to right. Note: if two nodes are in the same row and
 column, order them from left to right.
 
-Ex: Given the following tree…
+Ex: Given the following tree...
 
       8
      / \
@@ -12,7 +12,7 @@ Ex: Given the following tree…
       3    9
 
 return [[2], [8, 3], [29], [9]]
-Ex: Given the following tree…
+Ex: Given the following tree...
 
          100
         /   \

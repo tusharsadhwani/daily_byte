@@ -3,11 +3,11 @@ Given two strings s and t, return the minimum number of operations
 needed to convert s into t where a single operation consists of
 inserting a character, deleting a character, or replacing a character.
 
-Ex: Given the following strings s and t…
+Ex: Given the following strings s and t...
 
 s = "cat", t = "bat", return 1.
 
-Ex: Given the following strings s and t…
+Ex: Given the following strings s and t...
 
 s = "beach", t = "batch", return 2.
 Delete the 'e' in "beach" and add a 't' to the resulting "bach".

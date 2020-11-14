@@ -3,7 +3,7 @@ Given a 2D board that represents a word search puzzle and a string word,
 return whether or the given word can be formed in the puzzle by only
 connecting cells horizontally and vertically.
 
-Ex: Given the following board and words…
+Ex: Given the following board and words...
 
 board = [
   ['C','A','T','F'],

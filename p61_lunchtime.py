@@ -10,14 +10,14 @@ without being able to modify items.
 
 Note: items will only contain F and D characters.
 
-Ex: Given the following items…
+Ex: Given the following items...
 
 items = "FDFDFD", return 3
 the first "FD" creates the first balanced meal.
 the second "FD" creates the second balanced meal.
 the third "FD" creates the third balanced meal.
 
-Ex: Given the following items…
+Ex: Given the following items...
 
 items = "FDFFDFDD", return 2
 "FD" creates the first balanced meal.
