@@ -62,7 +62,7 @@ def stairs_recursive(count: int) -> int:
 def main() -> None:
     """Main function"""
     count = 2
-    # count = 8
+    # count = 3
 
     print(stairs_recursive(count))
     print(stairs_dp(count))
