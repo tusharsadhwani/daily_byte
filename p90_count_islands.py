@@ -20,7 +20,6 @@ return 4.
 """
 
 from typing import List
-from pprint import pprint
 
 
 def flood_island(grid: List[str], row: int, col: int, visited: List[List[bool]]) -> None:
