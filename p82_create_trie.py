@@ -4,7 +4,7 @@ Create a trie class that supports insertion and search functionalities.
 Note: You may assume only lowercase alphabetical characters will added
 to your trie.
 
-Ex: Given the following operations on your trie…
+Ex: Given the following operations on your trie...
 
 Trie trie = new Trie()
 trie.insert("programming");

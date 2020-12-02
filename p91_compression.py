@@ -5,19 +5,19 @@ of the array.
 Note: You should only compress the array if its compressed form will be
 at least as short as the length of its original form.
 
-Ex: Given the following character array chars…
+Ex: Given the following character array chars...
 
 chars = ['a', 'a', 'a', 'a', 'a', 'a'], return 2.
 chars should be compressed to look like the following:
 chars = ['a', '6']
 
-Ex: Given the following character array chars…
+Ex: Given the following character array chars...
 
 chars = ['a', 'a', 'b', 'b', 'c', 'c'], return 6.
 chars should be compressed to look like the following:
 chars = ['a', '2', 'b', '2', 'c', '2']
 
-Ex: Given the following character array chars…
+Ex: Given the following character array chars...
 
 chars = ['a', 'b', 'c'], return 3.
 In this case we chose not to compress chars.
