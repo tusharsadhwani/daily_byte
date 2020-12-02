@@ -24,7 +24,7 @@ In this case we chose not to compress chars.
 """
 
 
-from typing import List, Optional
+from typing import List
 
 
 def compress_chars(chars: List[str]) -> List[str]:
