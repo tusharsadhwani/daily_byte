@@ -2,12 +2,12 @@
 Given a positive integer N, return the number of prime numbers less than
 N.
 
-Ex: Given the following N…
+Ex: Given the following N...
 
 N = 3, return 1.
 2 is the only prime number less than 3.
 
-Ex: Given the following N…
+Ex: Given the following N...
 
 N = 7, return 3.
 2, 3, and 5 are the only prime numbers less than 7.
