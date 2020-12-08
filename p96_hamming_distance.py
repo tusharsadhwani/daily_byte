@@ -33,6 +33,7 @@ def main() -> None:
 
 
 def alternative() -> None:
+    """Alternative solution"""
     num1, num2 = 2, 4
     # num1, num2 = 54, 9
 
