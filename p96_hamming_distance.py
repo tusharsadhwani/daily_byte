@@ -19,13 +19,10 @@ def main() -> None:
     num1, num2 = 2, 4
     # num1, num2 = 54, 9
 
-    num1_binary = f'{num1:b}'
-    num2_binary = f'{num2:b}'
+    length = max((num1.bit_length(), num2.bit_length()))
 
-    length = max((len(num1_binary), len(num2_binary)))
-
-    num1_binary = f'{num1_binary:0>{length}}'
-    num2_binary = f'{num2_binary:0>{length}}'
+    num1_binary = f'{num1:0>{length}b}'
+    num2_binary = f'{num2:0>{length}b}'
 
     count = 0
     for bit1, bit2 in zip(num1_binary, num2_binary):
