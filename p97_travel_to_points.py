@@ -15,7 +15,7 @@ Ex: Given the following points...
 
 points = [[0, 1], [2, 3], [4, 0]], return 5.
 """
-from typing import NewType, Tuple
+from typing import Tuple
 
 from utils.pairwise import pairwise
 
