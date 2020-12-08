@@ -35,5 +35,16 @@ def main() -> None:
     print(count)
 
 
+def alternative() -> None:
+    num1, num2 = 2, 4
+    # num1, num2 = 54, 9
+
+    xor = num1 ^ num2
+
+    # TODO: py3.10 has a int.bit_count() function which can replace this
+    print(bin(xor).count('1'))
+
+
 if __name__ == "__main__":
     main()
+    alternative()
