@@ -1,3 +1,8 @@
+"""Assorted binary searches"""
+
+from typing import List
+
+
 def binary_search_greater(
         array: List[int],
         limit: int,
