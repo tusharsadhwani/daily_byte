@@ -153,10 +153,12 @@ def level_order_traversal_iter(
 
     if node.left is not None:
         queue.append(node.left.value)
-        level_order_traversal_iter(node.left, queue)
-
     if node.right is not None:
         queue.append(node.right.value)
+
+    if node.left is not None:
+        level_order_traversal_iter(node.left, queue)
+    if node.right is not None:
         level_order_traversal_iter(node.right, queue)
 
     return queue
