@@ -23,7 +23,6 @@ Ex: Given the following tree...
 
 return [7, 4, 1, 9]
 """
-
 from data_types.node_tree import build_tree, level_order_traversal
 
 

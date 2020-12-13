@@ -1,5 +1,4 @@
 """Assorted binary searches"""
-
 from typing import List
 
 

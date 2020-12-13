@@ -16,8 +16,6 @@ Ex: Given the following strings s and t...
 
 s = "xyz", t = "axbyc", return false.
 """
-
-
 from typing import Counter
 
 

@@ -1,5 +1,4 @@
 """Take two inputs and verify both are anagrams of each other"""
-
 from collections import Counter, defaultdict
 from typing import Dict
 

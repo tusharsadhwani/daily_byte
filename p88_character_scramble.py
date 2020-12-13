@@ -13,8 +13,6 @@ Ex: Given the following passage and text...
 
 passage = "dog" text = "didnotgo", return true.
 """
-
-
 from collections import Counter
 
 

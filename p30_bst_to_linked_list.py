@@ -46,7 +46,6 @@ return...
      \
       6
 """
-
 from data_types.node_list import create_node_list
 from data_types.node_tree import build_tree
 

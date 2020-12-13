@@ -10,7 +10,6 @@ Ex: Given the following strings s...
 
 s = "The Daily Byte", return "The Dialy Byte"
 """
-
 from typing import List
 
 

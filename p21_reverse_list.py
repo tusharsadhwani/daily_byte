@@ -11,7 +11,6 @@ Ex: Given the following linked lists...
 1->null, return a reference to the node that contains 1 which points to
     a list that looks like the following: 1->null
 """
-
 from data_types.node_list import NodeList, create_node_list
 
 

@@ -18,7 +18,6 @@ Ex: Given the following grid...
 00010
 return 4.
 """
-
 from typing import List
 
 

@@ -29,7 +29,6 @@ Ex: Given the tree
 
 and the search value 7, return null.
 """
-
 from __future__ import annotations
 from typing import Optional
 

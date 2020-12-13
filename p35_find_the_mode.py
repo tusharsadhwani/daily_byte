@@ -24,7 +24,6 @@ Ex: Given the following tree...
 
 return 9.
 """
-
 from typing import Optional
 
 from data_types.node_tree import build_tree

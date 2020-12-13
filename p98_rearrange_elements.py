@@ -11,7 +11,6 @@ nums = [3, 7, 0, 5, 0, 2]
 
 rearrange nums to look like the following: [3, 7, 5, 2, 0, 0]
 """
-
 from typing import List
 
 

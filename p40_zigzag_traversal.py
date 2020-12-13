@@ -21,7 +21,6 @@ Ex: Given the following tree...
 
 return [[8], [29, 2], [3, 9]]
 """
-
 from data_types.node_tree import build_tree, level_order_traversal
 
 

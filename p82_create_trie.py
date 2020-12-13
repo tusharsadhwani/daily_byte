@@ -11,8 +11,6 @@ trie.insert("programming");
 trie.search("computer") // returns false.
 trie.search("programming") // returns true.
 """
-
-
 from data_types.node_trie import TrieRoot
 
 

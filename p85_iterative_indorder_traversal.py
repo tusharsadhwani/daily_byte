@@ -20,7 +20,6 @@ Ex: Given the following tree...
 
 return [4, 1, 8, 2, 7]
 """
-
 from typing import List, Optional
 from data_types.node_tree import NodeTree, build_tree
 

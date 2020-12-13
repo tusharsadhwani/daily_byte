@@ -18,7 +18,6 @@ sentence1 = "copper coffee pot",
 sentence2 = "hot coffee pot",
 return ["copper", "hot"]
 """
-
 from typing import List
 
 

@@ -22,8 +22,6 @@ Ex: Given the following character array chars...
 chars = ['a', 'b', 'c'], return 3.
 In this case we chose not to compress chars.
 """
-
-
 from typing import List
 
 

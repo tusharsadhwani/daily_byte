@@ -20,7 +20,6 @@ Ex: Given the following tree...
 
 return [[3, 3], [6, 2], [7]]
 """
-
 from data_types.node_tree import build_tree, level_order_traversal
 
 

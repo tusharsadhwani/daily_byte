@@ -9,7 +9,6 @@ Ex: Given the following strings...
 "developer", return 0
 "abcabc", return -1
 """
-
 from typing import Dict
 
 
