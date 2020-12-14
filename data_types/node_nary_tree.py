@@ -3,17 +3,17 @@ from __future__ import annotations
 from typing import Any, Generator, List, Optional
 
 
-class NodeTree:
+class NodeNaryTree:
     """Standard N-ary tree implementation"""
 
     def __init__(self, value: int) -> None:
         self.value = value
-        self.children: Optional[List[NodeTree]] = None
+        self.children: Optional[List[NodeNaryTree]] = None
 
     def __repr__(self) -> str:
         return f'NodeTree(value={self.value})'
 
-    def __iter__(self) -> Generator[NodeTree, None, None]:
+    def __iter__(self) -> Generator[NodeNaryTree, None, None]:
         """Traverses the binary tree pre-order"""
         if self.value is not None:
             yield self
@@ -27,12 +27,12 @@ class NodeTree:
         print(*[node.value for node in self], sep=', ')
 
 
-def _build_nary_tree(value: Any) -> Optional[NodeTree]:
+def _build_nary_tree(value: Any) -> Optional[NodeNaryTree]:
     """Recursive function for build_tree"""
-    tree: Optional[NodeTree] = None
+    tree: Optional[NodeNaryTree] = None
 
     if isinstance(value, int):
-        tree = NodeTree(value)
+        tree = NodeNaryTree(value)
     elif value is not None:
         tree = _build_nary_tree(value[0])
         assert tree is not None
@@ -47,7 +47,7 @@ def _build_nary_tree(value: Any) -> Optional[NodeTree]:
     return tree
 
 
-def build_nary_tree(value: Any) -> NodeTree:
+def build_nary_tree(value: Any) -> NodeNaryTree:
     """Builds binary tree, input is in pre-order form"""
     assert value is not None
     tree = _build_nary_tree(value)
@@ -56,7 +56,7 @@ def build_nary_tree(value: Any) -> NodeTree:
 
 
 def level_order_traversal(
-        node: NodeTree,
+        node: NodeNaryTree,
         levels: Optional[List[List[int]]] = None,
         level: int = 0) -> List[List[int]]:
     """Traverses the binary tree level by level"""
