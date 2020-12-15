@@ -5,11 +5,11 @@ row of a keyboard to type.
 Note: You may assume that all words only contain lowercase alphabetical
 characters.
 
-Ex: Given the following list of words…
+Ex: Given the following list of words...
 
 words = ["two", "dad", "cat"], return ["two", "dad"].
 
-Ex: Given the following list of words…
+Ex: Given the following list of words...
 
 words = ["ufo", "xzy", "byte"], return [].
 """
