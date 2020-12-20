@@ -18,8 +18,7 @@ from typing import List
 
 def identical_elements(nums: List[int], max_dist: int) -> bool:
     """Returns whether or not an identical element exists in the list at
-    max `max_dist` elements apart
-    """
+    max `max_dist` elements apart"""
     size = len(nums)
     for i in range(size):
         for j in range(1, max_dist+1):
