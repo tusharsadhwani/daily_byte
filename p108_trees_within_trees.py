@@ -4,7 +4,7 @@ Note: For t to be a subtree of s not only must each node’s value in t
 match its corresponding node’s value in s, but t must also exhibit the
 exact same structure as s. You may assume both trees s and t exist.
 
-Ex: Given the following trees s and t…
+Ex: Given the following trees s and t...
 
 s = 1
    / \
@@ -16,7 +16,7 @@ t = 1
 
 return false
 
-Ex: Given the following trees s and t…
+Ex: Given the following trees s and t...
 
 s = 7
    / \
@@ -28,7 +28,7 @@ t = 7
 
 return true
 
-Ex: Given the following trees s and t…
+Ex: Given the following trees s and t...
 
 s = 7
    / \
