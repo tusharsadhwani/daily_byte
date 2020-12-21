@@ -21,9 +21,8 @@ def identical_elements(nums: List[int], max_dist: int) -> bool:
     max `max_dist` elements apart"""
     size = len(nums)
     for i in range(size):
-        for j in range(1, max_dist+1):
-            if i+j < size and nums[i] == nums[i+j]:
-                return True
+        if nums[i] in nums[i+1:i+max_dist+1]:
+            return True
 
     return False
 
