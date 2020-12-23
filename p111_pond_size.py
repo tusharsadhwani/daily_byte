@@ -36,7 +36,7 @@ def get_pond_size(
         col: int,
         visited: List[List[bool]],
         pond_cells: Optional[List[Tuple[int, int]]] = None) -> int:
-    """Recursively floods the land to mark visited cells as True"""
+    """Recursively floods the pond to count pond cells"""
     if pond_cells is None:
         pond_cells = []
 
