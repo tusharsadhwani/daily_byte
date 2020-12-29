@@ -33,6 +33,10 @@ class NodeTree:
 
         return True
 
+    # NOTE: currently two equal trees might not have the same hash.
+    def __hash__(self) -> int:
+        return id(self)
+
     def __iter__(self) -> Generator[NodeTree, None, None]:
         return self.traverse_inorder()
 
