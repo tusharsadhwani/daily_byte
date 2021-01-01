@@ -18,44 +18,7 @@ Ex: Given the following grid...
 00010
 return 4.
 """
-from typing import List
-
-
-def flood_island(grid: List[str], row: int, col: int, visited: List[List[bool]]) -> None:
-    """Recursively floods the island to mark visited cells as True"""
-    visited[row][col] = True
-
-    rows, cols = len(grid), len(grid[0])
-
-    for i, j in [(-1, 0), (0, -1), (0, 1), (1, 0)]:
-        new_row, new_col = row+i, col+j
-        if new_row < 0 or new_row >= rows:
-            continue
-        if new_col < 0 or new_col >= cols:
-            continue
-
-        if visited[new_row][new_col]:
-            continue
-
-        if grid[new_row][new_col] == '1':
-            flood_island(grid, new_row, new_col, visited)
-
-
-def count_islands(grid: List[str]) -> int:
-    """Count the number of islands in the grid"""
-    rows = len(grid)
-    cols = len(grid[0])
-
-    visited = [[False for _ in range(cols)] for _ in range(rows)]
-    island_count = 0
-
-    for i in range(rows):
-        for j in range(cols):
-            if grid[i][j] == '1' and not visited[i][j]:
-                island_count += 1
-                flood_island(grid, i, j, visited)
-
-    return island_count
+from utils.grid import count_entities
 
 
 def main() -> None:
@@ -74,7 +37,7 @@ def main() -> None:
     #     '00010',
     # ]
 
-    count = count_islands(grid)
+    count = count_entities(grid, '1')
     print(count)
 
 
