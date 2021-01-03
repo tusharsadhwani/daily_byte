@@ -113,3 +113,19 @@ def create_node_list_unique_items(items: List[int]) -> NodeList:
         node = node.next
 
     return head
+
+
+def reverse_node_list(head: NodeList) -> NodeList:
+    """Reverses given linked list. Destroys original list."""
+    start_node = head
+    prev_node, curr_node = start_node, start_node.next
+
+    while curr_node is not None:
+        temp = curr_node.next
+        curr_node.next = prev_node
+        prev_node = curr_node
+        curr_node = temp
+    last_node = prev_node
+
+    start_node.next = None
+    return last_node
