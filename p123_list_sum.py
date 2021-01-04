@@ -2,11 +2,11 @@
 Given two linked lists that represent two numbers, return the sum of the
 numbers also represented as a list.
 
-Ex: Given the two linked lists…
+Ex: Given the two linked lists...
 
 a = 1->2, b = 1->3, return a list that looks as follows: 2->5
 
-Ex: Given the two linked lists…
+Ex: Given the two linked lists...
 
 a = 1->9, b = 1, return a list that looks as follows: 2->0
 """
