@@ -49,19 +49,17 @@ def is_zeroes(tree: NodeTree) -> bool:
 
 def clean_tree(tree: NodeTree) -> Optional[NodeTree]:
     """Cleans out zero-subtrees in a binary tree"""
-    node: Optional[NodeTree] = tree
-
-    if is_zeroes(node):
+    if is_zeroes(tree):
         return None
 
-    if node.left:
-        if is_zeroes(node.left):
-            node.left = None
-    if tree.right:
-        if is_zeroes(node.right):
-            node.right = None
+    if tree.left is not None:
+        if is_zeroes(tree.left):
+            tree.left = None
+    if tree.right is not None:
+        if is_zeroes(tree.right):
+            tree.right = None
 
-    return node
+    return tree
 
 
 def main() -> None:
