@@ -2,6 +2,7 @@
 Given an array of integers, nums, each element in the array either
 appears once or twice. Return a list containing all the numbers that
 appear twice.
+
 Note: Each element in nums is between one and nums.length (inclusive).
 
 Ex: Given the following array nums...
