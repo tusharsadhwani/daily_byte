@@ -3,7 +3,7 @@ Given a string, s, return the length of the last word.
 
 Note: You may not use any sort of split() method.
 
-Ex: Given the following string…
+Ex: Given the following string...
 
 s = "The Daily Byte", return 4 (because "Byte" is four characters long).
 """
