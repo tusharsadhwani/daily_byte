@@ -1,6 +1,6 @@
 """Grid functions"""
 
-from typing import Sequence, TypeVar
+from typing import List, Sequence, TypeVar
 
 T = TypeVar('T')
 
@@ -10,7 +10,7 @@ def _flood(
         value: T,
         row: int,
         col: int,
-        visited: Sequence[Sequence[bool]]) -> None:
+        visited: List[List[bool]]) -> None:
     """Recursively floods grid to mark visited cells as True"""
     visited[row][col] = True
 
