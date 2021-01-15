@@ -17,10 +17,9 @@ Ex: Given the following array nums...
 
 nums = [7, 2, 2, 3, 3, 4, 4], return [2, 3, 4].
 """
-from typing import List
 
 
-def find_duplicates(nums: List[int]) -> List[int]:
+def find_duplicates(nums: list[int]) -> list[int]:
     """Returns duplicates in nums"""
     duplicates = []
 

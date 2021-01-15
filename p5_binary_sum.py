@@ -1,16 +1,15 @@
 """Program that takes two binary numbers as input and outputs their sum"""
 from itertools import zip_longest
-from typing import Tuple
 
 
-def half_adder(bit_a: str, bit_b: str) -> Tuple[str, str]:
+def half_adder(bit_a: str, bit_b: str) -> tuple[str, str]:
     """Half adder implementation"""
     carry = bit_b if bit_a == '1' else '0'
     _sum = bit_b if bit_a == '0' else '1' if bit_b == '0' else '0'
     return carry, _sum
 
 
-def full_adder(bit_a: str, bit_b: str, bit_c: str) -> Tuple[str, str]:
+def full_adder(bit_a: str, bit_b: str, bit_c: str) -> tuple[str, str]:
     """Full adder implementation using half adders"""
     carry1, sum1 = half_adder(bit_a, bit_b)
     carry2, _sum = half_adder(sum1, bit_c)

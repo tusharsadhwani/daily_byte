@@ -1,8 +1,7 @@
 """Program that prints the longest common prefix from a list of words"""
-from typing import List
 
 
-def find_common_prefix_length(words: List[str]) -> int:
+def find_common_prefix_length(words: list[str]) -> int:
     """Returns the length of longest common prefix from the list of words"""
     smallest_word_length = min(len(word) for word in words)
 
@@ -18,7 +17,7 @@ def find_common_prefix_length(words: List[str]) -> int:
     return index
 
 
-def longest_common_prefix(words: List[str]) -> str:
+def longest_common_prefix(words: list[str]) -> str:
     """Returns the common prefix in the list of words"""
     first_word = words[0]
     prefix_length = find_common_prefix_length(words)

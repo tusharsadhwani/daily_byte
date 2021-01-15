@@ -1,8 +1,7 @@
 """Code that prints if a string is a palindrome or not"""
-from typing import Tuple
 
 
-def iterate(text: str, forward_index: int, reverse_index: int) -> Tuple[int, int]:
+def iterate(text: str, forward_index: int, reverse_index: int) -> tuple[int, int]:
     """Finds the indices of the next set of alphabets in the string"""
     while not text[forward_index].isalpha():
         forward_index += 1
