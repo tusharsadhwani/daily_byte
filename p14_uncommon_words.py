@@ -18,10 +18,9 @@ sentence1 = "copper coffee pot",
 sentence2 = "hot coffee pot",
 return ["copper", "hot"]
 """
-from typing import List
 
 
-def find_uncommon_words(sentence1: str, sentence2: str) -> List[str]:
+def find_uncommon_words(sentence1: str, sentence2: str) -> list[str]:
     """Hello"""
     words1 = sentence1.split()
     words = set(words1)

@@ -19,7 +19,7 @@ goldMine = [
 return 23 (start at 9 and then move to 6 and 8 respectively)
 """
 from __future__ import annotations
-from typing import Generator, List, NamedTuple, Optional, Set
+from typing import Generator, NamedTuple, Optional
 
 
 class TrailItem(NamedTuple):
@@ -32,8 +32,8 @@ class TrailItem(NamedTuple):
 class TrailSet:
     """Holds a set of all cells in a gold trail"""
 
-    def __init__(self, trail: Optional[Set[TrailItem]] = None) -> None:
-        self._trail: Set[TrailItem] = trail.copy() if trail else set()
+    def __init__(self, trail: Optional[set[TrailItem]] = None) -> None:
+        self._trail: set[TrailItem] = trail.copy() if trail else set()
 
     def __repr__(self) -> str:
         return f'TrailSet{[item.value for item in self._trail]}'
@@ -55,8 +55,8 @@ class TrailSet:
 class Trail:
     """Holds an ordered list of all cells in a gold trail"""
 
-    def __init__(self, trail: Optional[List[TrailItem]] = None) -> None:
-        self._trail: List[TrailItem] = trail.copy() if trail else []
+    def __init__(self, trail: Optional[list[TrailItem]] = None) -> None:
+        self._trail: list[TrailItem] = trail.copy() if trail else []
 
     def __repr__(self) -> str:
         return f'Trail{[item.value for item in self._trail]}'
@@ -76,10 +76,10 @@ class Trail:
 
 
 def flood(
-        gold_mine: List[List[int]],
+        gold_mine: list[list[int]],
         row_index: int,
         col_index: int,
-        visited: List[List[bool]],
+        visited: list[list[bool]],
         trail: Optional[TrailSet] = None) -> Optional[TrailSet]:
     """Finds and returns the gold trail associated with given index"""
     cell_value = gold_mine[row_index][col_index]
@@ -113,11 +113,11 @@ def flood(
     return trail
 
 
-def find_trail_edges(trail_set: TrailSet, visited: List[List[bool]]) -> Set[TrailItem]:
+def find_trail_edges(trail_set: TrailSet, visited: list[list[bool]]) -> set[TrailItem]:
     """Finds all the edges in a set of trail items"""
     # NOTE: I think this breaks when a trail set is of a rectangle shape
 
-    trail_edges: Set[TrailItem] = set()
+    trail_edges: set[TrailItem] = set()
     for item in trail_set:
         row, col = item.row_index, item.col_index
         rows, cols = len(visited), len(visited[0])
@@ -137,12 +137,12 @@ def find_trail_edges(trail_set: TrailSet, visited: List[List[bool]]) -> Set[Trai
 
 def find_trails_by_edge(
         edge: TrailItem,
-        trail_edges: Set[TrailItem],
-        gold_mine: List[List[int]],
-        visited: List[List[bool]],
-        trails: Set[Trail],
+        trail_edges: set[TrailItem],
+        gold_mine: list[list[int]],
+        visited: list[list[bool]],
+        trails: set[Trail],
         path: Optional[Trail] = None,
-        visited_neighbours: Optional[Set[TrailItem]] = None) -> None:
+        visited_neighbours: Optional[set[TrailItem]] = None) -> None:
     """Recursive function to find all trails starting from an edge"""
     if path is None:
         path = Trail()
@@ -186,21 +186,21 @@ def find_trails_by_edge(
 
 
 def find_trails(
-        trail_edges: Set[TrailItem],
-        gold_mine: List[List[int]],
-        visited: List[List[bool]]) -> Set[Trail]:
+        trail_edges: set[TrailItem],
+        gold_mine: list[list[int]],
+        visited: list[list[bool]]) -> set[Trail]:
     """Finds all full length trails starting from the given edges"""
-    trails: Set[Trail] = set()
+    trails = set[Trail]()
     for edge in trail_edges:
         find_trails_by_edge(edge, trail_edges, gold_mine, visited, trails)
 
     return trails
 
 
-def find_max_gold_trail(gold_mine: List[List[int]]) -> int:
+def find_max_gold_trail(gold_mine: list[list[int]]) -> int:
     """Finds the gold trail with maximum value and returns its sum"""
     visited = [[False for cell in row] for row in gold_mine]
-    trail_sets: Set[TrailSet] = set()
+    trail_sets = set[TrailSet]()
 
     for row_index, row in enumerate(gold_mine):
         for col_index, _ in enumerate(row):

@@ -18,10 +18,9 @@ Ex: Given the following array nums...
 
 nums = [8, 4, 6], return false.
 """
-from typing import List
 
 
-def is_monotonic(nums: List[int]) -> bool:
+def is_monotonic(nums: list[int]) -> bool:
     """Returns if an array is monotonically increasing or decreasing"""
     if all(nums[n-1] >= nums[n] for n in range(1, len(nums))):
         return True

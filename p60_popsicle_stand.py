@@ -28,10 +28,9 @@ collet $10 from the fourth customer and give back $5 change.
 collect $20 from the fifth customer and give back $10 change
 ($10 bill and $5 bill).
 """
-from typing import List
 
 
-def validate_change(customers: List[int]) -> bool:
+def validate_change(customers: list[int]) -> bool:
     """Validates if the cashier can give change to each customer"""
     fives, tens, twenties = 0, 0, 0
 

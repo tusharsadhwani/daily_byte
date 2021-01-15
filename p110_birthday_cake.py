@@ -16,10 +16,8 @@ Ex: Given the following arrays appetite and cake...
 appetite = [3, 4, 5], cake = [2], return 0.
 """
 
-from typing import List
 
-
-def max_guests(appetite: List[int], cake: List[int]) -> int:
+def max_guests(appetite: list[int], cake: list[int]) -> int:
     """Returns maximum number of guests you can satisfy"""
     guest_count = 0
 

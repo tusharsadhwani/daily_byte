@@ -22,15 +22,15 @@ Ex: Given the following tree...
 
 return [[32], [53], [100, 3, 9], [78], [20]]
 """
-from typing import List, Optional
+from typing import Optional
 
 from data_types.node_tree import NodeTree, build_tree
 
 
 def gather_columns(
         node: NodeTree,
-        levels: Optional[List[List[int]]] = None,
-        level: int = 0) -> List[List[int]]:
+        levels: Optional[list[list[int]]] = None,
+        level: int = 0) -> list[list[int]]:
     """Returns column order traversal list of binary tree"""
     if levels is None:
         levels = []

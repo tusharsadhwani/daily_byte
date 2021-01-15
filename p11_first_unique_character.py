@@ -9,13 +9,12 @@ Ex: Given the following strings...
 "developer", return 0
 "abcabc", return -1
 """
-from typing import Dict
 
 
 def main() -> None:
     """Main Function"""
     string = input('> ')
-    unique_characters: Dict[str, int] = dict()
+    unique_characters = dict[str, int]()
     for index, char in enumerate(string):
         if char in unique_characters:
             unique_characters.pop(char)

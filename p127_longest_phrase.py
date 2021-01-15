@@ -15,12 +15,11 @@ words = ["the","eagle","flew"], return 4 because "flew" is the longest
 phrase you can create without using duplicate characters.
 """
 from itertools import chain, combinations
-from typing import List, Set
 
 
 def contain_duplicates(*strings: str) -> bool:
     """Returns if given strings contain repeated chatacters"""
-    chars: Set[str] = set()
+    chars = set[str]()
 
     for string in strings:
         for char in string:
@@ -32,7 +31,7 @@ def contain_duplicates(*strings: str) -> bool:
     return False
 
 
-def longest_phrase(words: List[str]) -> int:
+def longest_phrase(words: list[str]) -> int:
     """Returns length of longest phrase without repeated chatacters"""
     sizes = range(len(words) + 1)
     word_combos = chain.from_iterable(combinations(words, r=n) for n in sizes)

@@ -13,7 +13,6 @@ Ex: Given the following list of words...
 
 words = ["ufo", "xzy", "byte"], return [].
 """
-from typing import List
 
 
 def get_row(char: str) -> int:
@@ -30,7 +29,7 @@ def get_row(char: str) -> int:
     return -1
 
 
-def equal_elements(array: List[int]) -> bool:
+def equal_elements(array: list[int]) -> bool:
     """If all elements in an array are equal"""
     first = array[0]
     return array.count(first) == len(array)

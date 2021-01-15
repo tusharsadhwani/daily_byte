@@ -8,15 +8,13 @@ Ex: Given the following linked lists...
 1->2->3->null, n = 2, return 1->3->null
 1->2->3->null, n = 3, return 2->3->null
 """
-from typing import List
-
 from data_types.node_list import NodeList, create_node_list
 
 
 def remove_nth_to_last_node(head: NodeList, num: int) -> NodeList:
     """Removes Nth to last node from linked list"""
     tail = head.next
-    queue: List[NodeList] = [head]
+    queue: list[NodeList] = [head]
     while tail is not None:
         queue.append(tail)
         tail = tail.next

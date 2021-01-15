@@ -25,10 +25,8 @@ no element is greater than 4.
 # than N in and occurs after N in nums2. If no such number exists,
 # return -1.
 
-from typing import Dict, List
 
-
-def nearest_greater_to_the_right(nums1: List[int], nums2: List[int]) -> List[int]:
+def nearest_greater_to_the_right(nums1: list[int], nums2: list[int]) -> list[int]:
     """
     For every N in nums1, finds the nearest greater number in nums2 to
     the right of N.
@@ -36,12 +34,12 @@ def nearest_greater_to_the_right(nums1: List[int], nums2: List[int]) -> List[int
     For more on the algorithm refer:
     https://www.geeksforgeeks.org/next-greater-element/
     """
-    nums2_indices: Dict[int, int] = dict()
+    nums2_indices = dict[int, int]()
     for index, num in enumerate(nums2):
         nums2_indices[num] = index
 
-    ngr_reverse_list: List[int] = []
-    ngr_stack: List[int] = []
+    ngr_reverse_list: list[int] = []
+    ngr_stack: list[int] = []
 
     for num in reversed(nums2):
         while len(ngr_stack) > 0 and ngr_stack[-1] < num:
@@ -54,7 +52,7 @@ def nearest_greater_to_the_right(nums1: List[int], nums2: List[int]) -> List[int
 
         ngr_stack.append(num)
 
-    answer: List[int] = []
+    answer: list[int] = []
     for num in nums1:
         index = nums2_indices[num]
         reverse_index = -1 - index

@@ -6,14 +6,14 @@ pop() (removing an item),
 peek() (returning the top value without removing it), and
 empty() (whether or not the stack is empty).
 """
-from typing import List, Iterator
+from typing import Iterator
 from data_types.node_list import NodeList, create_node_list
 
 
 class Queue:
     """Simple Queue"""
 
-    def __init__(self, values: List[int]) -> None:
+    def __init__(self, values: list[int]) -> None:
         self.head = create_node_list(values)
 
         temp_node = self.head
@@ -43,7 +43,7 @@ class Queue:
 class QueueStack:
     """Implementing a stack using a queue"""
 
-    def __init__(self, values: List[int]) -> None:
+    def __init__(self, values: list[int]) -> None:
         self.queue = Queue(values)
 
     def __iter__(self) -> Iterator[int]:

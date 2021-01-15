@@ -10,12 +10,11 @@ Ex: Given the following strings s...
 
 s = "The Daily Byte", return "The Dialy Byte"
 """
-from typing import List
 
 
 def reverse_vowels(string: str) -> str:
     """Reverse the vowels in the string"""
-    vowels: List[int] = []
+    vowels: list[int] = []
     for idx, char in enumerate(string):
         if char.lower() in 'aeiou':
             vowels.append(idx)

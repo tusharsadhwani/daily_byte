@@ -9,10 +9,9 @@ nums1 = [2, 4, 4, 2], nums2 = [2, 4], return [2, 4]
 nums1 = [1, 2, 3, 3], nums2 = [3, 3], return [3]
 nums1 = [2, 4, 6, 8], nums2 = [1, 3, 5, 7], return []
 """
-from typing import List
 
 
-def array_intersection(nums1: List[int], nums2: List[int]) -> List[int]:
+def array_intersection(nums1: list[int], nums2: list[int]) -> list[int]:
     """Obtains the intersection of two arrays and returns it"""
     nums = set(nums1)
     intersection = set()

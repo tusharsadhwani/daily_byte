@@ -11,10 +11,9 @@ nums = [3, 7, 0, 5, 0, 2]
 
 rearrange nums to look like the following: [3, 7, 5, 2, 0, 0]
 """
-from typing import List
 
 
-def rearrange1(nums: List[int]) -> None:
+def rearrange1(nums: list[int]) -> None:
     """Rearrange the zeroes at the end of list"""
     index = len(nums) - 1
     while index >= 0:
@@ -28,7 +27,7 @@ def rearrange1(nums: List[int]) -> None:
     print(nums)
 
 
-def rearrange2(nums: List[int]) -> None:
+def rearrange2(nums: list[int]) -> None:
     """Rearrange the zeroes at the end of list"""
     zero_count = 0
     for index, num in enumerate(nums):

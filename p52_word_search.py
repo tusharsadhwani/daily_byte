@@ -15,19 +15,18 @@ word = "TEA", return true
 word = "SEAT", return true
 word = "BAT", return false
 """
-from typing import List, Tuple
 
 
 def get_valid_adjacent_coords(
-        board: List[List[str]],
-        coords: Tuple[int, int],
-        char: str) -> List[Tuple[int, int]]:
+        board: list[list[str]],
+        coords: tuple[int, int],
+        char: str) -> list[tuple[int, int]]:
     """Gets all valid adjacent coordinates matching the given char"""
     # NOTE: Currently this function doesn't keep track of already used
     # indices, assuming using the same characters repeatedly is allowed.
 
     x_coord, y_coord = coords
-    indices: List[Tuple[int, int]] = []
+    indices: list[tuple[int, int]] = []
 
     for i, j in [(-1, 0), (0, -1), (0, 1), (1, 0)]:
         new_x, new_y = x_coord+i, y_coord+j
@@ -40,8 +39,8 @@ def get_valid_adjacent_coords(
 
 
 def find_word_chunk(
-        board: List[List[str]],
-        coords: Tuple[int, int],
+        board: list[list[str]],
+        coords: tuple[int, int],
         chunk: str) -> bool:
     """
     Recursive algorithm to find a word chunk adjacent to the given
@@ -57,7 +56,7 @@ def find_word_chunk(
                for coords in adjacent_coords)
 
 
-def find_word(word: str, board: List[List[str]]) -> bool:
+def find_word(word: str, board: list[list[str]]) -> bool:
     """Returns if the given word can be found in the 2D word board."""
     word = word.upper()
 

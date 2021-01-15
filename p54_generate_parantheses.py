@@ -14,14 +14,13 @@ return [
     "()()()"
 ]
 """
-from typing import List
 
 
 def build_bracket_sequence(
         n_open: int,
         n_close: int,
-        perms: List[str],
-        seq: str = '') -> List[str]:
+        perms: list[str],
+        seq: str = '') -> list[str]:
     """Recursive function to find all possible bracket pairs"""
     if n_open == 0 and n_close == 0:
         perms.append(seq)
@@ -34,9 +33,9 @@ def build_bracket_sequence(
     return perms
 
 
-def get_bracket_perms(count: int) -> List[str]:
+def get_bracket_perms(count: int) -> list[str]:
     """Returns permutations of all valid bracket pairs"""
-    perms: List[str] = []
+    perms: list[str] = []
     return build_bracket_sequence(count, count, perms)
 
 

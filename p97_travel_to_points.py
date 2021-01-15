@@ -15,12 +15,10 @@ Ex: Given the following points...
 
 points = [[0, 1], [2, 3], [4, 0]], return 5.
 """
-from typing import Tuple
-
 from utils.pairwise import pairwise
 
 
-Point = Tuple[int, int]
+Point = tuple[int, int]
 
 
 def distance(point_a: Point, point_b: Point) -> int:

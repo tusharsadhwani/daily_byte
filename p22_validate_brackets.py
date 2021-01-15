@@ -11,12 +11,11 @@ Ex: Given the following strings...
 "(({[]}))", return true
 "{(})", return false
 """
-from typing import List
 
 
 def validate_brackets(brackets: str) -> bool:
     """Validate the sequence of given brackets"""
-    stack: List[str] = []
+    stack: list[str] = []
 
     pairs = {
         '(': ')',

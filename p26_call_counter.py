@@ -16,14 +16,13 @@ ping(3000), return 3 (3 calls within the last 3 seconds)
 ping(3002), return 3 (3 calls within the last 3 seconds)
 ping(7000), return 1 (1 call within the last 3 seconds)
 """
-from typing import List
 
 
 class CallCounter:
     """CallCounter implementation"""
 
     def __init__(self) -> None:
-        self.past_timestamps: List[int] = []
+        self.past_timestamps: list[int] = []
 
     def __repr__(self) -> str:
         return 'CallCounter()'

@@ -9,12 +9,11 @@ s = "ABC#", t = "CD##AB", return true
 s = "como#pur#ter", t = "computer", return true
 s = "cof#dim#ng", t = "code", return false
 """
-from typing import List
 
 
 def apply_backspaces(string: str) -> str:
     """Process the string with backspace characters into its result"""
-    new_string_chars: List[str] = []
+    new_string_chars: list[str] = []
     for char in string:
         if char == '#':
             try:

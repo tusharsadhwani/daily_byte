@@ -31,10 +31,9 @@ Explanation:
 1 and 1 are smashed together and both stones are destroyed.
 0 is returned as no stones remain.
 """
-from typing import List
 
 
-def smash_stones(stones: List[int]) -> int:
+def smash_stones(stones: list[int]) -> int:
     """Smashes stones together until one value remains"""
     stones.sort()
 

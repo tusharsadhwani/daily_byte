@@ -8,12 +8,11 @@ s = "abccba", return ""
 s = "foobar", return "fbar"
 s = "abccbefggfe", return "a"
 """
-from typing import List
 
 
 def remove_adjacent_duplicates(string: str) -> str:
     """Removes adjacent duplicate characters from string"""
-    stack: List[str] = []
+    stack: list[str] = []
     for char in string:
         if len(stack) > 0 and char == stack[-1]:
             stack.pop()

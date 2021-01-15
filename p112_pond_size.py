@@ -27,15 +27,15 @@ return 5.
 """
 
 
-from typing import List, Optional, Tuple
+from typing import Optional
 
 
 def get_pond_size(
-        grid: List[List[int]],
+        grid: list[list[int]],
         row: int,
         col: int,
-        visited: List[List[bool]],
-        pond_cells: Optional[List[Tuple[int, int]]] = None) -> int:
+        visited: list[list[bool]],
+        pond_cells: Optional[list[tuple[int, int]]] = None) -> int:
     """Recursively floods the pond to count pond cells"""
     if pond_cells is None:
         pond_cells = []
@@ -61,7 +61,7 @@ def get_pond_size(
     return len(pond_cells)
 
 
-def get_max_pond_size(grid: List[List[int]]) -> int:
+def get_max_pond_size(grid: list[list[int]]) -> int:
     """Finds and returns size of largest pond in the grid"""
     rows = len(grid)
     cols = len(grid[0])

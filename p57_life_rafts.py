@@ -17,12 +17,11 @@ weights = [1, 3, 5, 2] and limit = 5, return 3
 weights = [1, 2] and limit = 3, return 1
 weights = [4, 2, 3, 3] and limit = 5 return 3
 """
-from typing import List
 
 
 def find_largest_value_below(
         limit: int,
-        array: List[int],
+        array: list[int],
         start: int,
         end: int) -> int:
     """Uses binary search to find index of largest value below limit"""
@@ -39,7 +38,7 @@ def find_largest_value_below(
     return find_largest_value_below(limit, array, mid, end)
 
 
-def minimum_containers(weights: List[int], limit: int) -> int:
+def minimum_containers(weights: list[int], limit: int) -> int:
     """Find minimum number of containers required to fit all weights"""
     weights.sort()
 

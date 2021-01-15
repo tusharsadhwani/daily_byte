@@ -14,7 +14,6 @@ m.next(5) returns 4 because (3 + 5) / 2 = 4
 m.next(7) = returns 5 because (3 + 5 + 7) / 3 = 5
 m.next(6) = returns 6 because (5 + 7 + 6) / 3 = 6
 """
-from typing import Deque
 from collections import deque
 
 
@@ -23,7 +22,7 @@ class MovingAverage:
 
     def __init__(self, size: int) -> None:
         self.size = size
-        self.queue: Deque[int] = deque(maxlen=size)
+        self.queue: deque[int] = deque(maxlen=size)
 
     def __repr__(self) -> str:
         return f'MovingAverage(size={self.size})'

@@ -1,6 +1,5 @@
 """Standard trie implementation"""
 from __future__ import annotations
-from typing import Dict, Tuple
 
 
 class NodeTrie:
@@ -12,7 +11,7 @@ class NodeTrie:
             'character at a time.'
         )
         self.char = char
-        self.children: Dict[str, NodeTrie] = {}
+        self.children = dict[str, NodeTrie]()
         self.is_end = False
 
     def insert(self, string: str) -> None:
@@ -24,7 +23,7 @@ class NodeTrie:
             node = new_node
         node.is_end = True
 
-    def search_partial_word(self, string: str) -> Tuple[NodeTrie, str]:
+    def search_partial_word(self, string: str) -> tuple[NodeTrie, str]:
         """Looks for partial words in the trie, and returns last Node"""
         if string == '':
             return (self, string)
@@ -48,5 +47,5 @@ class TrieRoot(NodeTrie):
     def __init__(self) -> None:
         super().__init__('.')
         self.char = ''
-        self.children: Dict[str, NodeTrie] = {}
+        self.children = dict[str, NodeTrie]()
         self.is_end = False

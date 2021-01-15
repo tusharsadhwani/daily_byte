@@ -1,6 +1,6 @@
 """Standard N-ary tree implementation"""
 from __future__ import annotations
-from typing import Any, Generator, List, Optional
+from typing import Any, Generator, Optional
 
 
 class NodeNaryTree:
@@ -8,7 +8,7 @@ class NodeNaryTree:
 
     def __init__(self, value: int) -> None:
         self.value = value
-        self.children: Optional[List[NodeNaryTree]] = None
+        self.children: Optional[list[NodeNaryTree]] = None
 
     def __repr__(self) -> str:
         return f'NodeTree(value={self.value})'
@@ -57,8 +57,8 @@ def build_nary_tree(value: Any) -> NodeNaryTree:
 
 def level_order_traversal(
         node: NodeNaryTree,
-        levels: Optional[List[List[int]]] = None,
-        level: int = 0) -> List[List[int]]:
+        levels: Optional[list[list[int]]] = None,
+        level: int = 0) -> list[list[int]]:
     """Traverses the binary tree level by level"""
     if not levels:
         levels = []

@@ -17,7 +17,6 @@ N = 3, return 3
 2 steps + 1 step
 """
 from functools import lru_cache
-from typing import Dict
 
 
 def stairs_fib(count: int) -> int:
@@ -34,7 +33,7 @@ def stairs_fib(count: int) -> int:
 def stairs_dp(count: int) -> int:
     """Dynamic Programming solution to find ways to climb the stairs"""
     # Dictionary to hold number of solutions for i stairs
-    num_solutions: Dict[int, int] = {}
+    num_solutions: dict[int, int] = {}
 
     num_solutions[0] = 1
     num_solutions[1] = 1

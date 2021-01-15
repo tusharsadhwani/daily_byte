@@ -13,10 +13,7 @@ nums = [2, 3, 2], k = 2, return true.
 """
 
 
-from typing import List
-
-
-def identical_elements(nums: List[int], max_dist: int) -> bool:
+def identical_elements(nums: list[int], max_dist: int) -> bool:
     """Returns whether or not an identical element exists in the list at
     max `max_dist` elements apart"""
     size = len(nums)

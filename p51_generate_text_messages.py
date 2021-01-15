@@ -16,12 +16,11 @@ could send. Note: The mapping of digits to letters is as follows...
 Ex: digits = "23",
 return ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"]
 """
-from typing import Dict, List
 
 
-def generate_t9_messages(digits: str) -> List[str]:
+def generate_t9_messages(digits: str) -> list[str]:
     """Generate all possible strings from given T9 input"""
-    char_map: Dict[int, str] = {
+    char_map: dict[int, str] = {
         2: "abc",
         3: "def",
         4: "ghi",
@@ -32,7 +31,7 @@ def generate_t9_messages(digits: str) -> List[str]:
         9: "wxyz",
     }
 
-    perms: List[str] = []
+    perms: list[str] = []
     for digit_char in digits:
         digit = int(digit_char)
 

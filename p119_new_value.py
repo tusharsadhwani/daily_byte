@@ -21,7 +21,7 @@ value = 4, return the following tree...
          \
           4
 """
-from typing import List, Optional
+from typing import Optional
 from data_types.node_tree import NodeTree
 
 
@@ -51,7 +51,7 @@ def bst_insert(tree: NodeBST, value: int) -> None:
             bst_insert(tree.right, value)
 
 
-def build_bst(values: List[int]) -> NodeBST:
+def build_bst(values: list[int]) -> NodeBST:
     """Builds a binary search tree from given values"""
     if len(values) == 0:
         raise ValueError("Cannot create empty BST")

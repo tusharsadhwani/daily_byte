@@ -20,16 +20,16 @@ Ex: Given the following tree...
 
 return [4, 1, 8, 2, 7]
 """
-from typing import List, Optional
+from typing import Optional
 from data_types.node_tree import NodeTree, build_tree
 
 
-def iterative_inorder_traversal(tree: NodeTree) -> List[int]:
+def iterative_inorder_traversal(tree: NodeTree) -> list[int]:
     """Implements iterative inorder traversal"""
     current: Optional[NodeTree] = tree
-    stack: List[NodeTree] = []
+    stack: list[NodeTree] = []
 
-    items: List[int] = []
+    items: list[int] = []
 
     while True:
         if current is not None:

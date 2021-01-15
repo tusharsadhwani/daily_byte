@@ -19,12 +19,12 @@ Ex: nums = [1, 2, 3, 4, 5, 6] return the following tree...
      /   / \
     1   4   6
 """
-from typing import List, Optional
+from typing import Optional
 
 from data_types.node_tree import NodeTree
 
 
-def _create_balanced_bst(items: List[int]) -> Optional[NodeTree]:
+def _create_balanced_bst(items: list[int]) -> Optional[NodeTree]:
     """Recursive function to create the BST"""
     if not items:
         return None
@@ -42,7 +42,7 @@ def _create_balanced_bst(items: List[int]) -> Optional[NodeTree]:
     return tree
 
 
-def create_balanced_bst(items: List[int]) -> NodeTree:
+def create_balanced_bst(items: list[int]) -> NodeTree:
     """Create a balanced binary search tree out of a sorted list"""
     assert len(items) > 0, 'Items must not be empty list'
 

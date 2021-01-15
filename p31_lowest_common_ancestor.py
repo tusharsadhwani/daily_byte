@@ -31,7 +31,7 @@ Ex: Given the following tree...
 
 and a = 6, b = 8, return a reference to the node containing 8.
 """
-from typing import List, Optional, Tuple
+from typing import Optional
 
 from data_types.node_tree import NodeTree, build_tree
 
@@ -39,7 +39,7 @@ from data_types.node_tree import NodeTree, build_tree
 def find_trail(
         tree: NodeTree,
         value: int,
-        trail: Optional[List[NodeTree]] = None) -> Tuple[bool, List[NodeTree]]:
+        trail: Optional[list[NodeTree]] = None) -> tuple[bool, list[NodeTree]]:
     """Returns the ancestor trail of a value in a tree, if found"""
     if trail is None:
         trail = []
@@ -78,7 +78,7 @@ def main() -> None:
     _, trail_a = find_trail(tree, value_a)
     _, trail_b = find_trail(tree, value_b)
 
-    common_trail: List[NodeTree] = []
+    common_trail: list[NodeTree] = []
     for node_a, node_b in zip(trail_a, trail_b):
         if node_a != node_b:
             break

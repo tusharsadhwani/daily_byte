@@ -9,13 +9,11 @@ Ex: Given the following array nums...
 nums = [1, 9, 7, 4, 7, 13], return 4.
 The longest increasing subsequence is 1, 4, 7, 13.
 """
-from typing import List
-
 # NOTE: so, i thought this problem is asking for a continuous
 # subsequence, turns out, it wasn't.
 
 
-def find_longest_increasing_subsequence(nums: List[int]) -> List[int]:
+def find_longest_increasing_subsequence(nums: list[int]) -> list[int]:
     """Finds the longest continuous increasing subsequence"""
     max_subsequence_start = 0
     max_subsequence_length = 0

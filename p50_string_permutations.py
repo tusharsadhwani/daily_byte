@@ -7,10 +7,9 @@ Ex: Given the following string...
 
 S = "c7w2", return ["c7w2", "c7W2", "C7w2", "C7W2"]
 """
-from typing import List
 
 
-def string_perms(string: str) -> List[str]:
+def string_perms(string: str) -> list[str]:
     """Recursive implementation of string permutations"""
     if len(string) == 0:
         return ['']

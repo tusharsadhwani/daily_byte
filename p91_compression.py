@@ -22,12 +22,11 @@ Ex: Given the following character array chars...
 chars = ['a', 'b', 'c'], return 3.
 In this case we chose not to compress chars.
 """
-from typing import List
 
 
-def compress_chars(chars: List[str]) -> List[str]:
+def compress_chars(chars: list[str]) -> list[str]:
     """Returns compressed form of the chars"""
-    compressed: List[str] = []
+    compressed: list[str] = []
 
     char = chars[0]
     count = 1

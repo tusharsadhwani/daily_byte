@@ -25,15 +25,14 @@ Ex: Given the following binary tree and value k...
 k = 2, return 3 (2, 2 -> -4, -4 -> 2).
 """
 from functools import cache
-from typing import List
 
 from data_types.node_tree import NodeTree, build_tree
 
 
 @cache
-def tree_path_sums(node: NodeTree) -> List[int]:
+def tree_path_sums(node: NodeTree) -> list[int]:
     """Returns the sums of all tree paths from given node"""
-    sums: List[int] = [node.value]
+    sums: list[int] = [node.value]
 
     if node.left is not None:
         child_sums = tree_path_sums(node.left)
@@ -53,7 +52,7 @@ def main() -> None:
     # tree = build_tree([2, [-4, 2, None], 9])
     # num = -2
 
-    path_sums: List[int] = []
+    path_sums: list[int] = []
     for node in tree:
         path_sums.extend(tree_path_sums(node))
 
