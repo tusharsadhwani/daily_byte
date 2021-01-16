@@ -45,3 +45,10 @@ def count_entities(grid: Sequence[Sequence[T]], value: T) -> int:
                 _flood(grid, value, i, j, visited)
 
     return count
+
+
+def transpose(grid: Sequence[Sequence[T]]) -> Sequence[Sequence[T]]:
+    """Returns a matrix transpose"""
+    rows = len(grid)
+    cols = len(grid[0])
+    return [[grid[j][i] for j in range(cols)] for i in range(rows)]
