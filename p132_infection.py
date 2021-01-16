@@ -7,7 +7,7 @@ of minutes that must elapse until every person is sick.
 
 Note: If it is not possible for each person to become sick, return -1.
 
-Ex: Given the following 2D array grid…
+Ex: Given the following 2D array grid...
 
 grid = [
     [1, 1, 1],
@@ -20,7 +20,7 @@ grid = [
 [1, 0] and [0, 1] become sick at minute 3.
 [0, 0] and [0, 2] become sick at minute 4.
 
-Ex: Given the following 2D array grid…
+Ex: Given the following 2D array grid...
 
 grid = [
     [1, 1, 1],
