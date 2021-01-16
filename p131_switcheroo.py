@@ -11,8 +11,8 @@ nums = [
 ]
 return a matrix that looks as follows...
 [
-  [1,3],
-  [2,4]
+  [1, 3],
+  [2, 4]
 ]
 """
 from utils.grid import transpose
