@@ -3,13 +3,13 @@ Given the reference to the root of a binary search tree and a target
 value, return whether or not two individual values within the tree can
 sum to the target.
 
-Ex: Given the following tree and target…
+Ex: Given the following tree and target...
 
       1
      / \
     2   3, target = 4, return true.
 
-Ex: Given the following tree and target…
+Ex: Given the following tree and target...
 
       1
      / \

@@ -5,7 +5,7 @@ the array.
 Note: Two numbers in our array are partners if they reside at different
 indices and both contain the same value.
 
-Ex: Given the following array nums…
+Ex: Given the following array nums...
 
 nums = [5, 5, 3, 1, 1, 3, 3], return 5.
 5 (index 0) and 5 (index 1) are partners.
