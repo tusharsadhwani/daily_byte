@@ -52,3 +52,10 @@ def transpose(grid: Sequence[Sequence[T]]) -> Sequence[Sequence[T]]:
     rows = len(grid)
     cols = len(grid[0])
     return [[grid[j][i] for j in range(cols)] for i in range(rows)]
+
+
+def rotate_clockwise(grid: Sequence[Sequence[T]]) -> Sequence[Sequence[T]]:
+    """Returns a matrix rotated 90 degrees clockwise"""
+    rows = len(grid)
+    cols = len(grid[0])
+    return [[grid[cols-1-j][i] for j in range(cols)] for i in range(rows)]
