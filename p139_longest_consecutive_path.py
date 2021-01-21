@@ -51,7 +51,13 @@ def main() -> None:
     tree = build_tree([1, None, [2, None, 3]])
     # tree = build_tree([1, [2, 4, [3, 4, None]], [2, 5, 8]])
 
-    print(longest_chain(tree))
+    max_length = 0
+    for node in tree:
+        length = longest_chain(node)
+        if length > max_length:
+            max_length = length
+
+    print(max_length)
 
 
 if __name__ == "__main__":
