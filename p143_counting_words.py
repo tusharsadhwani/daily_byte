@@ -22,21 +22,13 @@ def main() -> None:
     """Main function"""
     words = ["the", "daily", "byte", "byte"]
     count = 1
-    words = ["coding", "is", "fun", "code", "coding", "fun"]
-    count = 2
+    # words = ["coding", "is", "fun", "code", "coding", "fun"]
+    # count = 2
 
     counter: Counter[str] = collections.Counter(words)
     words = sorted(set(words), key=lambda word: (-counter[word], word))
 
-    top_words: list[str] = []
-
-    for index, word in enumerate(words):
-        if index == count:
-            break
-
-        top_words.append(word)
-
-    print(top_words)
+    print(words[:count])
 
 
 if __name__ == '__main__':
