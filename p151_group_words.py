@@ -11,8 +11,8 @@ strs = ["car", "arc", "bee", "eeb", "tea"], return
   ["bee","eeb"]
 ]
 """
-from itertools import groupby
 from collections import Counter
+from itertools import groupby
 
 
 def group_anagrams(strings: list[str]) -> list[list[str]]:
