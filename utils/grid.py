@@ -16,7 +16,7 @@ def _flood(
 
     rows, cols = len(grid), len(grid[0])
 
-    for i, j in [(-1, 0), (0, -1), (0, 1), (1, 0)]:
+    for i, j in (-1, 0), (0, -1), (0, 1), (1, 0):
         new_row, new_col = row+i, col+j
         if new_row < 0 or new_row >= rows:
             continue
@@ -31,7 +31,7 @@ def _flood(
 
 
 def count_entities(grid: Sequence[Sequence[T]], value: T) -> int:
-    """Count the number of islands in the grid"""
+    """Count the number of entities in the grid matching given value"""
     rows = len(grid)
     cols = len(grid[0])
 
