@@ -13,7 +13,6 @@ Ex: Given the following words and value k...
 words = ["coding", "is", "fun", "code", "coding", "fun"], k = 2,
 return ["coding", "fun"].
 """
-
 import collections
 from typing import Counter
 

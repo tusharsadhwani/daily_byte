@@ -14,8 +14,6 @@ grid = [
   [0, 0, 1],
 ], return 4.
 """
-
-
 from typing import Optional
 
 

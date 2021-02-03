@@ -25,8 +25,6 @@ land = [
 ],
 return 5.
 """
-
-
 from typing import Optional
 
 

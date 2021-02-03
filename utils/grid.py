@@ -1,5 +1,4 @@
 """Grid functions"""
-
 from typing import Sequence, TypeVar
 
 T = TypeVar('T')
