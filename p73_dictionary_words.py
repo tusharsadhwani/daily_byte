@@ -22,3 +22,5 @@ s = "pizzaplanet", dictionary = ["plane", "pizza"], return false.
 # To make this work, you need to keep checking ahead for the whole
 # string, and check for a possible solution for every word length at
 # which there is a match.
+
+# TODO: incomplete

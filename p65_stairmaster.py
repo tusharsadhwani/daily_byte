@@ -12,3 +12,5 @@ Ex: Given the following cost array...
 
 cost = [1, 5, 10, 3, 7, 2], return 10.
 """
+
+# TODO: incomplete

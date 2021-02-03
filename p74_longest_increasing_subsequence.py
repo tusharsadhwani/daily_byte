@@ -12,6 +12,8 @@ The longest increasing subsequence is 1, 4, 7, 13.
 # NOTE: so, i thought this problem is asking for a continuous
 # subsequence, turns out, it wasn't.
 
+# TODO: incomplete
+
 
 def find_longest_increasing_subsequence(nums: list[int]) -> list[int]:
     """Finds the longest continuous increasing subsequence"""

@@ -22,3 +22,5 @@ Ex: Given the following stones...
 stones = [0, 1, 2, 4], return true.
 The frog can jump from stone 0, to stone 1, to stone 2, to stone 4.
 """
+
+# TODO: incomplete
