@@ -31,19 +31,17 @@ from data_types.node_tree import NodeTree, build_tree
 @cache
 def longest_chain(node: NodeTree) -> int:
     """Returns the number of consecutive numbers below given node"""
-    max_consecutive_count = 1  # itself
+    max_consecutives = 1  # itself
 
     if node.left and node.left.value == node.value + 1:
         consecutive_count = 1 + longest_chain(node.left)
-        if consecutive_count > max_consecutive_count:
-            max_consecutive_count = consecutive_count
+        max_consecutives = max(max_consecutives, consecutive_count)
 
     if node.right and node.right.value == node.value + 1:
         consecutive_count = 1 + longest_chain(node.right)
-        if consecutive_count > max_consecutive_count:
-            max_consecutive_count = consecutive_count
+        max_consecutives = max(max_consecutives, consecutive_count)
 
-    return max_consecutive_count
+    return max_consecutives
 
 
 def main() -> None:
@@ -51,12 +49,7 @@ def main() -> None:
     tree = build_tree([1, None, [2, None, 3]])
     # tree = build_tree([1, [2, 4, [3, 4, None]], [2, 5, 8]])
 
-    max_length = 0
-    for node in tree:
-        length = longest_chain(node)
-        if length > max_length:
-            max_length = length
-
+    max_length = max(longest_chain(node) for node in tree)
     print(max_length)
 
 

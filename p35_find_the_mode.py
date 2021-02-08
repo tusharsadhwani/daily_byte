@@ -37,6 +37,7 @@ def main() -> None:
     max_count = 0
     max_value = -1
     last_value: Optional[int] = None
+    count = 0
     for node in bst:
         if last_value != node.value:
             last_value = node.value

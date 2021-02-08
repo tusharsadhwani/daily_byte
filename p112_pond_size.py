@@ -72,8 +72,7 @@ def get_max_pond_size(grid: list[list[int]]) -> int:
             if grid[i][j] == 0 and not visited[i][j]:
                 # new pond found
                 pond_size = get_pond_size(grid, i, j, visited)
-                if pond_size > max_pond_size:
-                    max_pond_size = pond_size
+                max_pond_size = max(max_pond_size, pond_size)
 
     return max_pond_size
 

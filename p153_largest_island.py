@@ -59,8 +59,7 @@ def largest_island(grid: list[list[int]]) -> int:
         for j in range(cols):
             if grid[i][j] == 1 and not visited[i][j]:
                 island_size = flood_island(grid, i, j, visited)
-                if island_size > max_island_size:
-                    max_island_size = island_size
+                max_island_size = max(max_island_size, island_size)
 
     return max_island_size
 

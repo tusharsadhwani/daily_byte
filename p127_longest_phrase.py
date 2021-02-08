@@ -40,8 +40,7 @@ def longest_phrase(words: list[str]) -> int:
     for word_combo in word_combos:
         if not contain_duplicates(*word_combo):
             phrase_length = sum(len(word) for word in word_combo)
-            if phrase_length > max_phrase_length:
-                max_phrase_length = phrase_length
+            max_phrase_length = max(max_phrase_length, phrase_length)
 
     return max_phrase_length
 

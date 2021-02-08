@@ -36,11 +36,7 @@ def call_postorder(tree: NodeTree, callback: Callable[..., T]) -> Generator[T, N
 
 def max_sum(tree: NodeTree) -> int:
     """Find maximum"""
-    max_value = 0
-    for value in call_postorder(tree, x):
-        if value > max_value:
-            max_value = value
-
+    max_value = max(call_postorder(tree, x))
     return max_value
 
 

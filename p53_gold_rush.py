@@ -218,8 +218,7 @@ def find_max_gold_trail(gold_mine: list[list[int]]) -> int:
 
         for trail in trails:
             trail_sum = sum(item.value for item in trail)
-            if trail_sum > max_trail_sum:
-                max_trail_sum = trail_sum
+            max_trail_sum = max(max_trail_sum, trail_sum)
 
     return max_trail_sum
 
