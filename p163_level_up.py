@@ -53,7 +53,8 @@ def level_up(tree: NodeTree) -> None:
 def main() -> None:
     """Main function"""
     tree = build_tree([0, None, 3])
-    tree = build_tree([2, 1, 3])
+    # tree = build_tree([2, 1, 3])
+
     level_up(tree)
     tree.print_inorder()
 
