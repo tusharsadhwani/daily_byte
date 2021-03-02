@@ -17,7 +17,16 @@ from itertools import groupby
 
 def group_anagrams(strings: list[str]) -> list[list[str]]:
     """Groups anagrams together"""
-    return [list(group) for _, group in groupby(strings, key=Counter)]
+    anagrams: dict[frozenset[tuple[str, int]], list[str]] = {}
+
+    for string in strings:
+        counter = frozenset(Counter(string).items())
+        if counter in anagrams:
+            anagrams[counter].append(string)
+        else:
+            anagrams[counter] = [string]
+
+    return list(anagrams.values())
 
 
 def main() -> None:
