@@ -20,19 +20,24 @@ containing [[1, 6], [7, 10]].
 
 def combine_times(intervals: list[list[int]]) -> list[list[int]]:
     """Combines overlapping intervals"""
+    intervals.sort()
+
     new_intervals: list[list[int]] = []
 
-    for interval in intervals:
-        for index, new_interval in enumerate(new_intervals):
-            if ((interval[1] >= new_interval[0] and interval[0] <= new_interval[1]) or
-                    (new_interval[1] >= interval[0] and new_interval[0] <= interval[1])):
-                new_intervals[index] = [
-                    min(interval[0], new_interval[0]),
-                    max(interval[1], new_interval[1]),
-                ]
-                break
+    prev_interval = intervals[0]
+    for index in range(1, len(intervals)):
+        interval = intervals[index]
+
+        if interval[0] > prev_interval[1]:
+            new_intervals.append(prev_interval)
+            prev_interval = interval
         else:
-            new_intervals.append(interval)
+            prev_interval = [
+                min(prev_interval[0], interval[0]),
+                max(prev_interval[1], interval[1]),
+            ]
+
+    new_intervals.append(prev_interval)
 
     return new_intervals
 
